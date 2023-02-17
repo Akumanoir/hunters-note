@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Test</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #edeef6;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            background-color: #47a386;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            color: white;
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+        .modal-container {
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            opacity: 0;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-container.show {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .modal {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 30px 50px;
+            width: 600px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .modal h1 {
+            margin: 0;
+        }
+
+        .modal p {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <button id="open">
+        Click me please
+    </button>
+
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <h1>Modal are &#x1F60E</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum fugiat laboriosam ut, minima sequi sapiente maxime esse eligendi quae aliquam similique possimus non voluptas alias odit reprehenderit quos ipsam autem.</p>
+            <button id="close">
+                Close me
+            </button>
+        </div>
+    </div>
+
+    <script>
+       const open = document.getElementById('open')
+       const modal_container = document.getElementById('modal_container')
+       const close = document.getElementById('close')
+
+       open.addEventListener('click', () => {
+            modal_container.classList.add('show')
+       })
+
+       close.addEventListener('click', () => {
+            modal_container.classList.remove('show')
+       })
+    </script>
+</body>
+</html>
