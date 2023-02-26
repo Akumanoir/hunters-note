@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+img {
+    width: 10vw;
+}
+
+div.icon > img {
+    width: 30px;
+}
