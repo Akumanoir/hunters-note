@@ -118,21 +118,8 @@ button.card-monster:hover {
 /* Start modal Style */
 
 .modal_container {
-    position: fixed;
-    top: 0;
-    left: 0;
     opacity: 0;
     pointer-events: none;
-    width: 100vw;
-    height: 100vh;
-}
-
-.modal-container .show {
-    pointer-events: auto;
-    opacity: 1;
-}
-
-.overlay {
     background-color: #94ff476c;
     display: flex;
     align-items: center;
@@ -142,10 +129,17 @@ button.card-monster:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal_container.show {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .modal {
     background-color: var(--cor_bg01);
+    overflow: hidden;
     display: flex;
     position: relative;
     width: 940px;
@@ -195,4 +189,8 @@ button.card-monster:hover {
     font-family: var(--fonte_mhw);
     font-weight: 700;
     font-size: 2em;
+}
+
+.close {
+    cursor: pointer;
 }

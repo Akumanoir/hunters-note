@@ -1,8 +1,8 @@
-const open = document.getElementById('01')
-const modal_container = document.getElementById('modal_container')
-const close = document.getElementById('close')
+const open_modal = document.getElementById('01');
+const modal_container = document.getElementById('modal_container_01')  
+const close = document.getElementById('close');
 
-open.addEventListener('click', () => {
+open_modal.addEventListener('click', () => {
     modal_container.classList.add('show')
 })
 

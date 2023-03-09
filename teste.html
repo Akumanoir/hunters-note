@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
     <button class="card-monster" id="01">
@@ -41,17 +40,17 @@
     </div>
 
     <script>
-        const open = document.getElementById('01')
-const modal_container = document.getElementById('modal_container')
-const close = document.getElementById('close')
+        const open = document.getElementById('jargras');
+        const modal_container = document.getElementById('modal_container');       
+        const close = document.getElementById('close');  
 
-open.addEventListener('click', () => {
-    modal_container.classList.add('show')
-})
+        open.addEventListener('click', () => {
+            modal_container.classList.add('show')
+        })
 
-close.addEventListener('click', () => {
-    modal_container.classList.remove('show')
-})
+        close.addEventListener('click', () => {
+            modal_container.classList.remove('show')
+        })
     </script>
 </body>
 </html>
