@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: monster-hunter;
+    src: url(../fonte/monsterhunter.ttf) format('truetype');
+}
+
+:root {
+    --cor_bg01: #FDEDCC;
+    --cor_bg02: #BF9B7A;
+    --cor_highlight: #E5532A;
+    --cor_letter: #F2BB16;
+    --cor_green: #c6f5a5;
+    /*--cor_green: #93ff47;*/
+    --cor_green_highlight: #93ff47;
+    /*--cor_green_highlight: #88d452;*/
+    --fonte_mhw: 'Gelasio', serif;
+    --fonte_regular: 'Istok Web', sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: var(--fonte_regular);
+}
+
+body {
+    background-color: var(--cor_bg01);
+}
+
+/* configurações header -------------------------------------------------------------------------- */
+
+header {
+    background:var(--cor_green_highlight) url(../imagens/mhw-vanilla-bg.jpg) no-repeat top center fixed;
+    background-size: cover;
+    display: block;
+    height: 700px;
+}
+
+#gradient {
+    background-image: linear-gradient(to top, #94ff4728 5%, transparent);
+    height: 700px;
+    position: relative;
+}
+
+#title_container {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 700px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+}
+
+#title {
+    font-family: monster-hunter;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    color: white;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* Configurações Main ---------------------------------------------------------------------------- */
+
+main {
+    margin-top: 100px;
+}
+
+.container {
+    width: 80vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+.top {
+    display: flex;
+}
+
+.area_all {
+    display: flex;
+}
+
+.left-container {
+    width: 20%;
+    padding-top: 50px;
+    border-right: 1px solid #bf9b7aa2;
+}
+
+.category_buttons {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    border: none;
+    background-color: var(--cor_bg01);
+}
+
+.category_buttons > span {
+    font-family: var(--fonte_mhw);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* Start button style ------------------------------------------------------------------------------ */
+
+.right-container {
+    width: 80vw;
+    padding-top: 50px;
+    padding-left: 180px;
+}
+
+button.card-monster {
+    position: relative;
+    background-color: var(--cor_bg01);
+    border: none;
+    border-radius: 7%;
+    overflow: hidden;
+    width: 300px;
+    height: 340px;
+    margin: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.096);
+}
+
+div.image {
+    position: absolute;
+    justify-content: flex-end;
+    top: 40%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+}
+
+div.image img {
+    width: 185px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.monster-name {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0px 15px;
+    top: 40%;
+    width: 100%;
+    height: 70px;
+}
+
+div.monster-name .icon {
+    position: absolute;
+    top: 15%;
+    left: 78%;
+    width: 40px;
+    height: 50px;
+}
+
+div.monster-name .icon > img {
+    width: 38px;
+}
+
+div.monster-name div {
+    position: absolute;
+    width: 205px;
+    top: 35%;
+    left: 0%;
+    text-align: left;
+}
+
+div.monster-name div strong {
+    position: relative;
+    left: 15%;
+    font-family: var(--fonte_mhw);
+    font-weight: bolder;
+    font-size: 1.5em;
+
+}
+
+button.card-monster:hover {
+    transform: translate(0%, -1%);
+    cursor: pointer;
+    box-shadow: 0px 5px 20px 10px var(--cor_green), inset 0px 0px 20px 5px var(--cor_green);
+    border: 3px solid var(--cor_green_highlight);
+}
+
+/* End Button Style -------------------------------------------------------------------------*/
