@@ -9,6 +9,16 @@
     src: url(../fonte/monsterhunter.ttf) format('truetype');
 }
 
+/*
+    cores
+    bg01: #FDEDCC;
+    bg02: #BF9B7A;
+    highlight: #E5532A;
+    letter: #F2BB16;
+    green: #93ff47;
+    green_highlight: #88d452;
+*/
+
 :root {
     --cor_bg01: #FDEDCC;
     --cor_bg02: #BF9B7A;
@@ -30,8 +40,16 @@
     font-family: var(--fonte_regular);
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    
+    min-height: 500px;
+}
+
 body {
-    background-color: var(--cor_bg01);
+    background: var(--cor_bg01) url('../imagens/paper-texture.jpg') center center no-repeat fixed;
+    background-size: cover;
 }
 
 /* configurações header -------------------------------------------------------------------------- */
@@ -40,12 +58,12 @@ header {
     background:var(--cor_green_highlight) url(../imagens/mhw-vanilla-bg.jpg) no-repeat top center fixed;
     background-size: cover;
     display: block;
-    height: 700px;
+    height: 850px;
 }
 
 #gradient {
     background-image: linear-gradient(to top, #94ff4728 5%, transparent);
-    height: 700px;
+    height: 850px;
     position: relative;
 }
 
@@ -80,14 +98,18 @@ main {
     width: 80vw;
     margin: auto;
     overflow: hidden;
+    max-width: 1536px;
 }
 
 .top {
     display: flex;
+    justify-content: flex-end;
 }
 
 .area_all {
     display: flex;
+    background-color: #93ff47;
+    
 }
 
 .left-container {
@@ -120,11 +142,13 @@ main {
 
 button.card-monster {
     position: relative;
-    background-color: var(--cor_bg01);
+    background: var(--cor_bg01) url('../imagens/paper-texture.jpg') top center no-repeat;
+    background-size: cover;
     border: none;
     border-radius: 7%;
     overflow: hidden;
-    width: 300px;
+    /*width: 300px;*/
+    width: 27%;
     height: 340px;
     margin: 20px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.096);
