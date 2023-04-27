@@ -8,11 +8,13 @@
 
     <!-- <link rel="stylesheet" href="estilo/botoes.css"> -->
     <link rel="stylesheet" href="estilo/desktop.css">
+    <link rel="stylesheet" href="estilo/mediaquery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
         <div id="gradient">
-            <div class="title_conteiner" id="title_container">
+            <div class="title_container" id="title_container">
                 <img src="imagens/mhw-vanilla-logo.png" alt="Monster Hunter World Logo">
                 <!-- <div id="title">Hunter's Note</div> -->
             </div>
@@ -21,59 +23,69 @@
     <main>
         <div class="container" id="container">
             <div class="top" id="top">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
                 <form action="nao-tem.php" method="get">
                     <label for="search">Pesquisa</label>
-                    <input type="search" name="search" id="search" placeholder="Search name">
+                    <div id="search_container">
+                        <span class="material-symbols-outlined">
+                            search
+                            </span>
+                        <input type="search" name="search" id="search" placeholder="Search name">
+                    </div>
                 </form>
             </div>
             <div class="area_all" id="area_all">
                 <div class="left-container">
                     <ul>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons active" onclick="all()">
                                 <span>All</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons" id="fanged" onclick="fangedWyvern()">
                                 <span>Fanged Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons" onclick="fangedBeast()">
+                                <span>Fanged Beasts</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="category_buttons" onclick="birdWyvern()">
                                 <span>Bird Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons" onclick="bruteWyvern()">
                                 <span>Brute Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons" onclick="flyingWyvern()">
                                 <span>Flying Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons" onclick="piscineWyvern()">
                                 <span>Piscine Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons" onclick="elderDragon()">
                                 <span>Elder Dragons</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons">
-                                <div class="icon"></div>
+                            <button class="category_buttons" onclick="relicts()">
+                                <span>Relicts</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="category_buttons" onclick="smallMonster()">
                                 <span>Small Monsters</span>
                             </button>
                         </li>
@@ -82,11 +94,11 @@
                 <!-- Start button div -->
                 <div class="right-container">
                     <div class="all" id="list-monsters">
-                        <button class="card-monster" id="01">
+                        <button class="card-monster fanged-wyverns" id="01">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/9/98/MHW_Great_Jagras_Icon.png/revision/latest?cb=20190826171459" alt="button info Great Jargas">
                             </div>
-                           <div class="monster-name">
+                            <div class="monster-name">
                                 <div>
                                     <strong>Great Jargas</strong>
                                 </div>
@@ -95,9 +107,9 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster" id="02">
+                        <button class="card-monster bird-wyverns" id="02">
                             <div class="image">
-                                <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/8/83/MHW_Kulu-Ya-Ku_Icon.png/revision/latest?cb=20190826171505" alt="button info kulu-ya-ku">
+                                <img src="https://static.wikia.nocookie.net/monsterhunter/images/c/ca/MHW-Kulu-Ya-Ku_Icon.png/revision/latest/scale-to-width-down/250?cb=20210724005910" alt="button info kulu-ya-ku">
                             </div>
                            <div class="monster-name">
                                 <div>
@@ -108,7 +120,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster bird-wyverns" id="03">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/a/a0/MHW_Pukei-Pukei_Icon.png/revision/latest?cb=20190826171419" alt="button info Pukei-Pukei">
                             </div>
@@ -121,7 +133,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="04">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/b/b4/MHW_Barroth_Icon.png/revision/latest?cb=20190826171447" alt="button info Barroth">
                             </div>
@@ -134,7 +146,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster piscine_wyverns" id="05">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/5/5e/MHW_Jyuratodus_Icon.png/revision/latest?cb=20190826171502" alt="button info Jyuratodus">
                             </div>
@@ -147,7 +159,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="06">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/9/90/MHW_Tobi-Kadachi_Icon.png/revision/latest?cb=20190826171429" alt="button info Tobi-Kadachi">
                             </div>
@@ -160,7 +172,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="07">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/a/a9/MHW_Anjanath_Icon.png/revision/latest?cb=20190826171444" alt="button info Anjanath">
                             </div>
@@ -173,7 +185,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="08">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/8/84/MHW_Rathian_Icon.png/revision/latest?cb=20190826171426" alt="button info Rathian">
                             </div>
@@ -186,7 +198,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster bird-wyverns" id="09">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/7d/MHW_Tzitzi-Ya-Ku_Icon.png/revision/latest?cb=20190826171430" alt="button info Tzitzi-Ya-Ku">
                             </div>
@@ -199,7 +211,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="10">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/3/3f/MHW_Paolumu_Icon.png/revision/latest?cb=20190908065630" alt="button info Paolumu">
                             </div>
@@ -212,7 +224,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="11">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/6/67/MHW_Great_Girros_Icon.png/revision/latest?cb=20190826171458" alt="button info Great Girros">
                             </div>
@@ -225,7 +237,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="12">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/9/91/MHW_Radobaan_Icon.png/revision/latest?cb=20190826171421" alt="button info Radobaan">
                             </div>
@@ -238,7 +250,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="13">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/5/5f/MHW_Legiana_Icon.png/revision/latest?cb=20190826171406" alt="button info Legiana">
                             </div>
@@ -251,7 +263,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="14">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/d/d1/MHW_Odogaron_Icon.png/revision/latest?cb=20190826171415" alt="button info Odogaron">
                             </div>
@@ -264,7 +276,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="15">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/4/41/MHW_Rathalos_Icon.png/revision/latest?cb=20190826171425" alt="button info Rathalos">
                             </div>
@@ -277,7 +289,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="16">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/0/0f/MHW_Diablos_Icon.png/revision/latest?cb=20190826171452" alt="button info Diablos">
                             </div>
@@ -290,7 +302,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="17">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/c/cb/MHW_Kirin_Icon.png/revision/latest?cb=20190826171504" alt="button info Kirin">
                             </div>
@@ -303,7 +315,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="18">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/ef/MHW_Zorah_Magdaros_Icon.png/revision/latest?cb=20190826171434" alt="button info Zorah Magdaros">
                             </div>
@@ -316,7 +328,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="19">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/4/4c/MHW_Dodogama_Icon.png/revision/latest?cb=20190826171453" alt="button info Dodogama">
                             </div>
@@ -329,7 +341,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="20">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/71/MHW_Pink_Rathian_Icon.png/revision/latest?cb=20190826171417" alt="button info Pink Rathian">
                             </div>
@@ -342,7 +354,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="21">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/0/02/MHW_Bazelgeuse_Icon.png/revision/latest?cb=20190826171448" alt="button info Bazelgeuse">
                             </div>
@@ -355,7 +367,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="22">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/c/c4/MHW_Deviljho_Icon.png/revision/latest?cb=20190826171451" alt="button info Deviljho">
                             </div>
@@ -368,7 +380,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster piscine_wyverns" id="23">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/d/db/MHW_Lavasioth_Icon.png/revision/latest?cb=20190826171405" alt="button info Lavasioth">
                             </div>
@@ -381,7 +393,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="24">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/e2/MHW_Uragaan_Icon.png/revision/latest?cb=20190826171431" alt="button info Uragaan">
                             </div>
@@ -394,7 +406,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="25">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/2/26/MHW_Azure_Rathalos_Icon.png/revision/latest?cb=20190826171445" alt="button info Azure Rathalos">
                             </div>
@@ -407,7 +419,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="26">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/78/MHW_Nergigante_Icon.png/revision/latest?cb=20190826171411" alt="button info Nergigante">
                             </div>
@@ -420,7 +432,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="27">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/b/b1/MHW_Kushala_Daora_Icon.png/revision/latest?cb=20190826171404" alt="button info Kushala Daora">
                             </div>
@@ -433,7 +445,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="28">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/f/f3/MHW_Black_Diablos_Icon.png/revision/latest?cb=20190826171450" alt="button info Black Diablos">
                             </div>
@@ -446,7 +458,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="29">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/c/ca/MHW_Teostra_Icon.png/revision/latest?cb=20190826171428" alt="button info Teostra">
                             </div>
@@ -459,7 +471,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="30">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/6/6c/MHW_Lunastra_Icon.png/revision/latest?cb=20190826171408" alt="button info Lunastra">
                             </div>
@@ -472,7 +484,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="31">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/0/06/MHW_Vaal_Hazak_Icon.png/revision/latest?cb=20190911051837" alt="button info Vaal Hazak">
                             </div>
@@ -485,20 +497,20 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="32">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/8/8d/MHW_Xeno%27jiiva_Icon.png/revision/latest?cb=20190826171433" alt="button info Xeno’jiiva">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Xeno’jiiva</strong>
+                                    <strong>Xeno&#8217;jiiva</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/mhw-icon-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster piscine-wyverns" id="33">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/d/d9/MHWI_Beotodus_Icon.png/revision/latest?cb=20190830203843" alt="button info Beotodus">
                             </div>
@@ -511,7 +523,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="34">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/f/fe/MHWI_Banbaro_Icon.png/revision/latest?cb=20190826171436" alt="button info Banbaro">
                             </div>
@@ -524,7 +536,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="35">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/3/37/MHWI_Brachydios_Icon.png/revision/latest?cb=20190908065756" alt="button info Brachydios">
                             </div>
@@ -537,7 +549,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="36">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/9/9d/MHWI_Tigrex_Icon.png/revision/latest?cb=20190826172809" alt="button info Tigrex">
                             </div>
@@ -550,7 +562,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-beasts" id="37">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/f/f5/MHWI_Rajang_Icon.png/revision/latest?cb=20190915071810" alt="button info Rajang">
                             </div>
@@ -563,7 +575,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="37">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/d/da/MHWI_Nargacuga_Icon.png/revision/latest?cb=20190826172421" alt="button info Nargacuga">
                             </div>
@@ -576,7 +588,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="38">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/8/88/MHWI_Barioth_Icon.png/revision/latest?cb=20190908065805" alt="button info Barioth">
                             </div>
@@ -589,7 +601,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="39">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/7e/MHWI_Glavenus_Icon.png/revision/latest?cb=20190826172421" alt="button info Glavenus">
                             </div>
@@ -602,7 +614,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="40">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/71/MHWI_Zinogre_Icon.png/revision/latest?cb=20190904143725" alt="button info Zinogre">
                             </div>
@@ -615,7 +627,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster bird-wyverns" id="41">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/6/65/MHWI_Yian_Garuga_Icon.png/revision/latest?cb=20190904175007" alt="button info Yian Garuga">
                             </div>
@@ -628,7 +640,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="42">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/4/4f/MHWI_Velkhana_Icon.png/revision/latest?cb=20190826171442" alt="button info Velkhana">
                             </div>
@@ -641,7 +653,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="43">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/d/dd/MHWI_Namielle_Icon.png/revision/latest?cb=20190904175006" alt="button info Namielle">
                             </div>
@@ -654,7 +666,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="44">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/f/fc/MHWI_Fulgur_Anjanath_Icon.png/revision/latest?cb=20190826171439" alt="button info Fulgur Anjanath">
                             </div>
@@ -667,7 +679,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="45">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/c/c1/MHWI_Acidic_Glavenus_Icon.png/revision/latest?cb=20190826171435" alt="button info Acidic Glavenus">
                             </div>
@@ -680,7 +692,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="46">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/8/85/MHWI_Ebony_Odogaron_Icon.png/revision/latest?cb=20190826171438" alt="button info Ebony Odogaron">
                             </div>
@@ -693,72 +705,72 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="47">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/9/9c/MHWI_Nightshade_Paolumu_Icon.png/revision/latest?cb=20190908065800" alt="button info Nightshade Paolumu">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Nightshade Paolumu</strong>
+                                    <strong>Nightshade <br> Paolumu</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="48">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/77/MHWI_Shrieking_Legiana_Icon.png/revision/latest?cb=20190826171441" alt="button info Shrieking Legiana">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Shrieking Legiana</strong>
+                                    <strong>Shrieking <br> Legiana</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster bird-wyverns" id="49">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/ed/MHWI_Coral_Pukei-Pukei_Icon.png/revision/latest?cb=20190908065758" alt="button info Coral Pukei-Pukei">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Coral Pukei-Pukei</strong>
+                                    <strong>Coral <br> Pukei-Pukei</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="50">
                             <div class="image">
                                 <img src="https://i.pinimg.com/originals/ef/87/7f/ef877fcd38d74752b2d70a11eaed8eb3.png" alt="button info Frostfang Barioth">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Frostfang Barioth</strong>
+                                    <strong>Frostfang <br> Barioth</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="51">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/d/d5/MHWI_Seething_Bazelgeuse_Icon.png/revision/latest?cb=20190908065802" alt="button info Seething Bazelgeuse">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Seething Bazelgeuse</strong>
+                                    <strong>Seething <br> Bazelgeuse</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="52">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/e8/MHWI_Savage_Deviljho_Icon.png/revision/latest?cb=20190910123555" alt="button info Savage Deviljho">
                             </div>
@@ -771,20 +783,20 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster brute-wyverns" id="53">
                             <div class="image">
                                 <img src="https://i.pinimg.com/originals/05/a3/8a/05a38a56162769ba53402232195e897f.png" alt="button info Raging Brachydios">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Raging Brachydios</strong>
+                                    <strong>Raging <br> Brachydios</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="54">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/b/b6/MHWI_Ruiner_Nergigante_Icon.png/revision/latest?cb=20190904175343" alt="button info Ruiner Nergigante">
                             </div>
@@ -797,7 +809,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-beasts" id="55">
                             <div class="image">
                                 <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-furious_rajang_icon.png" alt="button info Furious Rajang">
                             </div>
@@ -810,7 +822,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="56">
                             <div class="image">
                                 <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-gold_rathian_icon.png" alt="button info Safi'jiiva">
                             </div>
@@ -823,20 +835,20 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="57">
                             <div class="image">
                                 <img src="https://preview.redd.it/1npjxlfvmb071.png?width=3779&format=png&auto=webp&s=c895179331536d61dad81c567461a84cd8a633c9" alt="button info Safi'jiiva">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Safi'jiiva</strong>
+                                    <strong>Safi&#8217;jiiva</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="58">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/8/84/MHWI_Shara_Ishvalda_Icon.png/revision/latest?cb=20190908065803" alt="button info Shara Ishvalda">
                             </div>
@@ -849,7 +861,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="59">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/b/b9/MHWI_Brute_Tigrex_Icon.png/revision/latest?cb=20190915071809" alt="button info Brute Tigrex">
                             </div>
@@ -862,7 +874,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster flying-wyverns" id="60">
                             <div class="image">
                                 <img src="https://i.pinimg.com/originals/7a/64/d2/7a64d2bfea4aa47dc4308326ded60700.png" alt="button info Silver Rathalos">
                             </div>
@@ -875,48 +887,48 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="61">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/0/0e/MHWI_Viper_Tobi-Kadachi_Icon.png/revision/latest?cb=20190908065804" alt="button info Viper Tobi-Kadachi">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Viper Tobi-Kadachi</strong>
+                                    <strong>Viper <br> Tobi-Kadachi</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="62">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/5/52/MHWI_Blackveil_Vaal_Hazak_Icon.png/revision/latest?cb=20190911051724" alt="button info Blackveil Vaal Hazak">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Blackveil Vaal Hazak</strong>
+                                    <strong>Blackveil <br> Vaal Hazak</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster bird-wyverns" id="63">
                             <div class="image">
                                 <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-scarred_yian_garuga_icon.png" alt="button info Scarred Yian Garuga">
                             </div>
                            <div class="monster-name">
                                 <div>
-                                    <strong>Scarred Yian Garuga</strong>
+                                    <strong>Scarred Yian <br> Garuga</strong>
                                 </div>
                                 <div class="icon">
                                     <img src="imagens/iceborne-logo-50.png" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster fanged-wyverns" id="64">
                             <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/gthumbnails/stygian_zinogre_icon-mhw-wiki-guide.png" alt="button info Stygian Zinogre">
+                                <img src="https://static.wikia.nocookie.net/monsterhunter/images/f/f3/MHWI-Stygian_Zinogre_Icon.png/revision/latest/scale-to-width-down/250?cb=20210724012446" alt="button info Stygian Zinogre">
                             </div>
                            <div class="monster-name">
                                 <div>
@@ -927,7 +939,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="65">
                             <div class="image">
                                 <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-alatreon_icon.png" alt="button info Alatreon">
                             </div>
@@ -940,7 +952,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="66">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/ed/MHW_Kulve_Taroth_Icon.png/revision/latest?cb=20190826171403" alt="button info Kulve Taroth">
                             </div>
@@ -953,7 +965,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster relicts" id="67">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/f/f5/MHW_Leshen_Icon.png/revision/latest?cb=20190826171407" alt="button info Leshen">
                             </div>
@@ -966,7 +978,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster relicts" id="68">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/c/ce/MHW_Ancient_Leshen_Icon.png/revision/latest?cb=20190826171443" alt="button info Ancient Leshen">
                             </div>
@@ -979,7 +991,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="69">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/5/5b/MHW_Behemoth_Icon.png/revision/latest?cb=20190826171449" alt="button info Behemoth">
                             </div>
@@ -992,7 +1004,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster elder-dragons" id="70">
                             <div class="image">
                                 <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-fatalis_icon.png" alt="button info Fatalis">
                             </div>
@@ -1005,7 +1017,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="71">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/0/07/MHWI_Anteka_Icon.png/revision/latest?cb=20190910123554" alt="button info Anteka">
                             </div>
@@ -1018,7 +1030,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="72">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/7e/MHW_Apceros_Icon.png/revision/latest?cb=20190826172124" alt="button info Apceros">
                             </div>
@@ -1031,7 +1043,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="73">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/4/4e/MHW_Aptonoth_Icon.png/revision/latest?cb=20190826172125" alt="button info Aptonoth">
                             </div>
@@ -1044,7 +1056,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="74">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/b/b0/MHW_Barnos_Icon.png/revision/latest?cb=20190826172422" alt="button info Barnos">
                             </div>
@@ -1057,7 +1069,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="75">
                             <div class="image">
                                 <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-boaboa_icon.png" alt="button info Boaboa">
                             </div>
@@ -1070,7 +1082,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="76">
                             <div class="image">
                                 <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-cortos_icon.png" alt="button info Cortos">
                             </div>
@@ -1083,7 +1095,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="77">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/ed/MHW_Gajalaka_Icon.png/revision/latest?cb=20190826171454" alt="button info Gajalaka">
                             </div>
@@ -1096,7 +1108,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="78">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/c/cc/MHW_Gajau_Icon.png/revision/latest?cb=20190826171455" alt="button info Gajau">
                             </div>
@@ -1109,7 +1121,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="79">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/2/29/MHW_Gastodon_Icon.png/revision/latest?cb=20190826171456" alt="button info Gastodon">
                             </div>
@@ -1122,7 +1134,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters fanged-wyverns" id="80">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/a/a6/MHW_Girros_Icon.png/revision/latest?cb=20190826171457" alt="button info Girros">
                             </div>
@@ -1135,7 +1147,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="81">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/e5/MHW_Grimalkyne_Icon.png/revision/latest?cb=20190826171500" alt="button info Grimalkyne">
                             </div>
@@ -1148,7 +1160,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="82">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/4/4d/MHW_Hornetaur_Icon.png/revision/latest?cb=20190826172126" alt="button info Hornetaur">
                             </div>
@@ -1161,7 +1173,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters fanged-wyverns" id="83">
                             <div class="image">
                                 <img src="https://www.nicepng.com/png/full/135-1356453_mhw-jagras-icon-monster-hunter-world-jagras-icon.png" alt="button info Jargras">
                             </div>
@@ -1174,7 +1186,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="84">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/a/a7/MHW_Kelbi_Icon.png/revision/latest?cb=20190826172122" alt="button info Kelbi">
                             </div>
@@ -1187,7 +1199,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="85">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/b/b5/MHW_Kestodon_Icon.png/revision/latest?cb=20190826171503" alt="button info Kestodon">
                             </div>
@@ -1200,7 +1212,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="86">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/d/da/MHW_Mernos_Icon.png/revision/latest?cb=20190826171409" alt="button info Mernos">
                             </div>
@@ -1213,7 +1225,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="87">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/c/c8/MHW_Mosswine_Icon.png/revision/latest?cb=20190826172123" alt="button info Mosswine">
                             </div>
@@ -1226,7 +1238,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="88">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/2/2e/MHW_Noios_Icon.png/revision/latest?cb=20190826171413" alt="button info Noios">
                             </div>
@@ -1239,7 +1251,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="89">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/e/eb/MHWI_Popo_Icon.png/revision/latest?cb=20190910123554" alt="button info Popo">
                             </div>
@@ -1252,7 +1264,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="90">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/b/bf/MHW_Raphinos_Icon.png/revision/latest?cb=20190826171423" alt="button info Raphinos">
                             </div>
@@ -1265,7 +1277,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters fanged-wyverns" id="91">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/9/9f/MHW_Shamos_Icon.png/revision/latest?cb=20190826171427" alt="button info Shamos">
                             </div>
@@ -1278,7 +1290,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="92">
                             <div class="image">
                                 <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/a/aa/MHW_Vespoid_Icon.png/revision/latest?cb=20190826172123" alt="button info Vespoid">
                             </div>
@@ -1291,9 +1303,9 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster">
+                        <button class="card-monster small-monsters" id="93">
                             <div class="image">
-                                <img src="https://static.wikia.nocookie.net/monsterhunterworld_gamepedia_en/images/7/7d/MHWI_Wulg_Icon.png/revision/latest?cb=20190916141406" alt="button info Wulg">
+                                <img src="https://mhworld.kiranico.com/storage/mhw/icon/ems063_ID.png" alt="button info Wulg">
                             </div>
                            <div class="monster-name">
                                 <div>
@@ -1305,12 +1317,16 @@
                             </div>
                         </button>
                     </div>
-                    <!--
-                    <button>Load more</button>-->
+                    <div id="load_cont"><button id="load-more">Load more</button></div>
                 </div>
                 <!-- End Button div -->
             </div>
         </div>
     </main>
+    <footer>
+        <span>Placeholder</span>
+    </footer>
+
+    <script src="script/buttons.js"></script>
 </body>
 </html>

@@ -24,9 +24,10 @@
     --cor_bg02: #BF9B7A;
     --cor_highlight: #E5532A;
     --cor_letter: #F2BB16;
-    --cor_green: #c6f5a5;
+    --cor_green: #adff73;
     /*--cor_green: #93ff47;*/
     --cor_green_highlight: #93ff47;
+    --cor_green-shadow: #98ee5a57;
     /*--cor_green_highlight: #88d452;*/
     --fonte_mhw: 'Gelasio', serif;
     --fonte_regular: 'Istok Web', sans-serif;
@@ -45,6 +46,7 @@ html, body {
     height: 100%;
     
     min-height: 500px;
+    min-width: 390px;
 }
 
 body {
@@ -55,7 +57,7 @@ body {
 /* configurações header -------------------------------------------------------------------------- */
 
 header {
-    background:var(--cor_green_highlight) url(../imagens/mhw-vanilla-bg.jpg) no-repeat top center fixed;
+    background:var(--cor_green_highlight) url(../imagens/mhw-vanilla-bg.jpg) no-repeat top center;
     background-size: cover;
     display: block;
     height: 850px;
@@ -91,39 +93,103 @@ header {
 /* Configurações Main ---------------------------------------------------------------------------- */
 
 main {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .container {
-    width: 80vw;
+    max-width: 70vw;
     margin: auto;
-    overflow: hidden;
-    max-width: 1536px;
+    /*overflow: hidden;*/
 }
 
 .top {
     display: flex;
     justify-content: flex-end;
+    border-bottom: 1px solid var(--cor_bg02);
+    padding: 10px;
+}
+
+.top span {
+    display: none;
+}
+
+div#search_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor_bg01);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.247);
+    border-radius: 50px;
+    /*margin-right: 90px;*/
+    height: 40px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 48;
+  display: block;
+}
+
+form > label {
+    display: none;
+}
+
+form > div#search_container > input[type=search] {
+    background-color: var(--cor_bg01);
+    border: none;
+    margin-left: 15px;
+    height: 100%;
+    width: 240px;
+}
+
+/* remove o x da barra de pesquisa */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+/* ------------------------------------------------------------ */
+
+form > div#search_container > input[type=search]:focus-within {
+    outline: none;
+    border: none;
 }
 
 .area_all {
     display: flex;
-    background-color: #93ff47;
+    /*background-color: #93ff47;*/
     
 }
 
 .left-container {
-    width: 20%;
+    display: block;
+    width: 28%;
     padding-top: 50px;
     border-right: 1px solid #bf9b7aa2;
 }
 
 .category_buttons {
-    width: 100%;
     display: flex;
-    padding: 5px;
+    flex-wrap: wrap;
+    align-content: center;
     border: none;
-    background-color: var(--cor_bg01);
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform .1s, box-shadow .1s, border .1s;
+}
+
+.category_buttons:hover {
+    transform: translate(-5px, 0px);
+    box-shadow: 2px 5px 2px 1px var(--cor_green-shadow);
+    border-top: 2px solid var(--cor_green);
+    border-bottom: 2.5px solid var(--cor_green);
 }
 
 .category_buttons > span {
@@ -137,74 +203,69 @@ main {
 .right-container {
     width: 80vw;
     padding-top: 50px;
-    padding-left: 180px;
+    padding-left: 100px;
+}
+
+.all {
+    text-align: center;
 }
 
 button.card-monster {
-    position: relative;
     background: var(--cor_bg01) url('../imagens/paper-texture.jpg') top center no-repeat;
     background-size: cover;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.247);
     border: none;
     border-radius: 7%;
     overflow: hidden;
-    /*width: 300px;*/
+    /*width: 270px;*/
+    height: 300px;
     width: 27%;
-    height: 340px;
     margin: 20px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.096);
+    padding: 20px;
+    cursor: pointer;
+    display: none;
+    transition: transform .1s, box-shadow .1s, border .1s;
+}
+
+button.card-monster:nth-child(1),
+button.card-monster:nth-child(2),
+button.card-monster:nth-child(3),
+button.card-monster:nth-child(4),
+button.card-monster:nth-child(5),
+button.card-monster:nth-child(6),
+button.card-monster:nth-child(7),
+button.card-monster:nth-child(8),
+button.card-monster:nth-child(9) {
+    display: inline-block;
 }
 
 div.image {
-    position: absolute;
-    justify-content: flex-end;
-    top: 40%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
 }
 
 div.image img {
-    width: 185px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 150px;
 }
 
 div.monster-name {
-    position: relative;
     display: flex;
-    margin: 0;
-    padding: 0px 15px;
-    top: 40%;
-    width: 100%;
-    height: 70px;
-}
-
-div.monster-name .icon {
-    position: absolute;
-    top: 15%;
-    left: 78%;
-    width: 40px;
-    height: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+    height: calc(100% - 180px);
 }
 
 div.monster-name .icon > img {
     width: 38px;
 }
 
-div.monster-name div {
-    position: absolute;
-    width: 205px;
-    top: 35%;
-    left: 0%;
-    text-align: left;
-}
-
 div.monster-name div strong {
-    position: relative;
-    left: 15%;
     font-family: var(--fonte_mhw);
     font-weight: bolder;
     font-size: 1.5em;
@@ -212,10 +273,39 @@ div.monster-name div strong {
 }
 
 button.card-monster:hover {
-    transform: translate(0%, -1%);
+    transform: translate(0px, -2px);
+    box-shadow: 0px 5px 30px 10px var(--cor_green_highlight), inset 0px 0px 20px 5px var(--cor_green-shadow);
+    /*border: 3px solid var(--cor_green);*/
+}
+
+#load_cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button#load-more {
+    display: block;
+    background: var(--cor_bg01) url('../imagens/paper-texture.jpg') no-repeat center center fixed;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.247);
+    font-family: var(--fonte_mhw);
+    font-size: 1em;
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0px 5px 20px 10px var(--cor_green), inset 0px 0px 20px 5px var(--cor_green);
-    border: 3px solid var(--cor_green_highlight);
+}
+
+button#load-more:hover {
+    transform: translate(0px, -1px);
+    box-shadow: 0px 1px 10px 5px var(--cor_green_highlight);
 }
 
 /* End Button Style -------------------------------------------------------------------------*/
+
+footer {
+    background-color: white;
+    margin-top: 50px;
+    height: 50px;
+    text-align: center;
+}
