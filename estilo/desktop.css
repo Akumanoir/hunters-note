@@ -50,14 +50,14 @@ html, body {
 }
 
 body {
-    background: var(--cor_bg01) url('../imagens/paper-texture.jpg') center center no-repeat fixed;
+    background: var(--cor_bg01) url('../images/paper-texture.jpg') center center no-repeat fixed;
     background-size: cover;
 }
 
 /* configurações header -------------------------------------------------------------------------- */
 
 header {
-    background:var(--cor_green_highlight) url(../imagens/mhw-vanilla-bg.jpg) no-repeat top center;
+    background:var(--cor_green_highlight) url(../images/mhw-vanilla-bg.jpg) no-repeat top center;
     background-size: cover;
     display: block;
     height: 850px;
@@ -211,7 +211,7 @@ form > div#search_container > input[type=search]:focus-within {
 }
 
 button.card-monster {
-    background: var(--cor_bg01) url('../imagens/paper-texture.jpg') top center no-repeat;
+    background: var(--cor_bg01) url('../images/paper-texture.jpg') top center no-repeat;
     background-size: cover;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.247);
     border: none;
@@ -286,7 +286,7 @@ button.card-monster:hover {
 
 button#load-more {
     display: block;
-    background: var(--cor_bg01) url('../imagens/paper-texture.jpg') no-repeat center center fixed;
+    background: var(--cor_bg01) url('../images/paper-texture.jpg') no-repeat center center fixed;
     padding: 10px;
     border: none;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.247);
