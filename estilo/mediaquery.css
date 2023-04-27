@@ -115,6 +115,7 @@ TV: acima de 1200px
     header, #gradient {
         height: 500px;
     }
+
     .title_container img {
         width: 300px;
     }
@@ -149,6 +150,7 @@ TV: acima de 1200px
     }
     
     .right-container {
+        width: 300px;
         padding: 0px;
         margin: auto;
     }

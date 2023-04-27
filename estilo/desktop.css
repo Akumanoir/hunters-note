@@ -74,7 +74,7 @@ header {
     position: absolute;
     top: 60%;
     left: 50%;
-    width: 700px;
+    width: 80%;
     transform: translate(-50%, -50%);
     overflow: hidden;
     text-align: center;
@@ -223,10 +223,10 @@ button.card-monster {
     margin: 20px;
     padding: 20px;
     cursor: pointer;
-    display: none;
     transition: transform .1s, box-shadow .1s, border .1s;
+    display: none;
 }
-
+/*
 button.card-monster:nth-child(1),
 button.card-monster:nth-child(2),
 button.card-monster:nth-child(3),
@@ -238,7 +238,7 @@ button.card-monster:nth-child(8),
 button.card-monster:nth-child(9) {
     display: inline-block;
 }
-
+*/
 div.image {
     display: flex;
     flex-wrap: wrap;
@@ -308,4 +308,12 @@ footer {
     margin-top: 50px;
     height: 50px;
     text-align: center;
+}
+
+.show {
+    display: inline-block;
+}
+
+.hide {
+    display: none;
 }

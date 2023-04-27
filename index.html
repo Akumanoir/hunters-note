@@ -37,10 +37,10 @@
                 </form>
             </div>
             <div class="area_all" id="area_all">
-                <div class="left-container">
+                <div class="left-container" id="lefty">
                     <ul>
                         <li>
-                            <button class="category_buttons active" onclick="all()">
+                            <button class="category_buttons active" onclick="tudo()">
                                 <span>All</span>
                             </button>
                         </li>
@@ -50,42 +50,42 @@
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="fangedBeast()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Fanged Beasts</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="birdWyvern()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Bird Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="bruteWyvern()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Brute Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="flyingWyvern()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Flying Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="piscineWyvern()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Piscine Wyverns</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="elderDragon()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Elder Dragons</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="relicts()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Relicts</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category_buttons" onclick="smallMonster()">
+                            <button class="category_buttons" onclick="filterSelection('cars')">
                                 <span>Small Monsters</span>
                             </button>
                         </li>
@@ -109,7 +109,7 @@
                         </button>
                         <button class="card-monster bird-wyverns" id="02">
                             <div class="image">
-                                <img src="https://static.wikia.nocookie.net/monsterhunter/images/c/ca/MHW-Kulu-Ya-Ku_Icon.png/revision/latest/scale-to-width-down/250?cb=20210724005910" alt="button info kulu-ya-ku">
+                                <img src="images/button-icon/MHW-Kulu-Ya-Ku_Icon.png" alt="button info kulu-ya-ku">
                             </div>
                            <div class="monster-name">
                                 <div>
@@ -1303,7 +1303,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="card-monster small-monsters" id="93">
+                        <button class="card-monster small-monsters" id="94">
                             <div class="image">
                                 <img src="https://mhworld.kiranico.com/storage/mhw/icon/ems063_ID.png" alt="button info Wulg">
                             </div>
@@ -1317,7 +1317,7 @@
                             </div>
                         </button>
                     </div>
-                    <div id="load_cont"><button id="load-more">Load more</button></div>
+                    <div id="load_cont"><button id="load-more">Load more</button></div> 
                 </div>
                 <!-- End Button div -->
             </div>
