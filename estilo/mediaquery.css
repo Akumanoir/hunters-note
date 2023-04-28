@@ -88,7 +88,6 @@ TV: acima de 1200px
 
     .left-container {
         display: none;
-        background: var(--cor_bg01) url('../images/paper-texture.jpg') no-repeat center center;
         min-width: 25%;
         height: 1080px;
         padding-left: 10px;
@@ -141,7 +140,6 @@ TV: acima de 1200px
     .left-container {
         display: none;
         padding: 10px;
-        background: var(--cor_bg01) url('../images/paper-texture.jpg') no-repeat center center;
         width: 100%;
         padding-left: 10px;
         border-bottom: 2px solid var(--cor_bg02);
