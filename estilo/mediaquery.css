@@ -88,9 +88,8 @@ TV: acima de 1200px
 
     .left-container {
         display: none;
-        position: absolute;
-        background: var(--cor_bg01) url('../imagens/paper-texture.jpg') no-repeat center center;
-        width: 20%;
+        background: var(--cor_bg01) url('../images/paper-texture.jpg') no-repeat center center;
+        min-width: 25%;
         height: 1080px;
         padding-left: 10px;
         border-right: 2px solid var(--cor_bg02);
@@ -135,14 +134,21 @@ TV: acima de 1200px
         cursor: pointer;
     }
 
+    .area_all {
+        flex-direction: column;
+    }
+
     .left-container {
         display: none;
-        position: absolute;
-        background: var(--cor_bg01) url('../imagens/paper-texture.jpg') no-repeat center center;
-        width: 20%;
-        height: 1080px;
+        padding: 10px;
+        background: var(--cor_bg01) url('../images/paper-texture.jpg') no-repeat center center;
+        width: 100%;
         padding-left: 10px;
-        border-right: 2px solid var(--cor_bg02);
+        border-bottom: 2px solid var(--cor_bg02);
+    }
+
+    .category_buttons {
+        justify-content: center;
     }
 
     .category_buttons > span {

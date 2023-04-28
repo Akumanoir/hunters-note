@@ -52,5 +52,120 @@ function fangedWyvern() {
         }
     }
     loadMoreBnt.style.display = 'none'
+    
+}
+
+function fangedBeasts() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('fanged-beasts')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function birdWyverns() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('bird-wyverns')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function bruteWyverns() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('brute-wyverns')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function flyingWyverns() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('flying-wyverns')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function piscineWyverns() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('piscine-wyverns')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function elderDragons() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('elder-dragons')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function relicts() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('relicts')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function smallMonsters() {
+    for (var i = 0; i < boxes.length ; i++) {
+    
+        if(boxes[i].className.includes('small-monsters')) {
+            boxes[i].style.display = 'inline-block'  
+        } else {
+            boxes[i].style.display = 'none'
+        }
+    }
+    loadMoreBnt.style.display = 'none'
+}
+
+function changesize() {
+    var left_container = document.getElementById('lefty')
+    if (window.innerWidth >= 1335) {
+        left_container.style.display = 'block'
+    } else {
+        left_container.style.display = 'none'
+    }
+}
+
+function menu() {
+    var left_container = document.getElementById('lefty')
+    if (left_container.style.display == 'none') {
+        left_container.style.display = 'block'
+    } else {
+        left_container.style.display = 'none'
+    }
 }
 

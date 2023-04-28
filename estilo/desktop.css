@@ -192,6 +192,13 @@ form > div#search_container > input[type=search]:focus-within {
     border-bottom: 2.5px solid var(--cor_green);
 }
 
+.category_buttons:focus-within {
+    transform: translate(-5px, 0px);
+    box-shadow: 2px 5px 2px 1px var(--cor_green-shadow);
+    border-top: 2px solid var(--cor_green);
+    border-bottom: 2.5px solid var(--cor_green);
+}
+
 .category_buttons > span {
     font-family: var(--fonte_mhw);
     font-size: 1.5em;
@@ -305,15 +312,7 @@ button#load-more:hover {
 
 footer {
     background-color: white;
-    margin-top: 50px;
+    margin-top: 100px;
     height: 50px;
     text-align: center;
-}
-
-.show {
-    display: inline-block;
-}
-
-.hide {
-    display: none;
 }
