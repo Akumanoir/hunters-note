@@ -94,6 +94,8 @@ header {
 
 main {
     margin-top: 40px;
+    background-color: #93ff47;
+    min-height: 900px;
 }
 
 .container {
