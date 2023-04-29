@@ -251,22 +251,22 @@ TV: acima de 1200px
         border-top: 2px solid var(--cor_green);
         border-bottom: 2.5px solid var(--cor_green);
     }
-
+/*
     .category_buttons:hover {
         transform: translate(none);
         box-shadow: none;
         border-top: none;
         border-bottom: none;
     }
-
+*/
     button.card-monster:active {
         transform: translate(0px, -2px);
         box-shadow: 0px 5px 30px 10px var(--cor_green_highlight), inset 0px 0px 20px 5px var(--cor_green-shadow);
         /*border: 3px solid var(--cor_green);*/
     }
-
+/*
     button.card-monster:hover {
         transform: translate(none);
         box-shadow: none;
-    }
+    }*/
 }
