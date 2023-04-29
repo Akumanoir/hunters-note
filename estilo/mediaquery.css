@@ -176,7 +176,7 @@ TV: acima de 1200px
     }
 }
 
-@media (hover: none) and (pointer: coarse) and (max-width: 795px){
+@media (hover: none) and (pointer: coarse){
 
     body {
         background-image: none;
@@ -186,95 +186,7 @@ TV: acima de 1200px
         background-image: url(../images/mhw-vanilla-bg-mobile.jpg);
     }
 
-    header, #gradient {
-        height: 500px;
-    }
-
-    .title_container img {
-        width: 300px;
-    }
-    .container {
-        max-width: none;
-        width: 100%;
-    }
-
-    .top {
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .top span {
-        display: block;
-        cursor: pointer;
-    }
-
-    .area_all {
-        flex-direction: column;
-    }
-
-    .left-container {
-        display: none;
-        padding: 10px;
-        width: 100%;
-        padding-left: 10px;
-        border-bottom: 2px solid var(--cor_bg02);
-    }
-
-    .category_buttons {
-        justify-content: center;
-    }
-
-    .category_buttons > span {
-        font-size: 1.35em;
-    }
-    
-    .right-container {
-        width: 300px;
-        padding: 0px;
-        margin: auto;
-    }
-
-    .all {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-
-    button.card-monster {
-        height: 300px;
-        width: 230px;
-    }
-
-    div.monster-name div strong {
-        font-size: 1.25em;
-    }
-
     button.card-monster {
         background-image: none;
-    }
-
-    .category_buttons:active {
-        box-shadow: 2px 5px 2px 1px var(--cor_green-shadow);
-        border-top: 2px solid var(--cor_green);
-        border-bottom: 2.5px solid var(--cor_green);
-    }
-
-    .category_buttons:hover {
-        transform: translate(none);
-        box-shadow: none;
-        border-top: none;
-        border-bottom: none;
-    }
-
-    button.card-monster:active {;
-        box-shadow: 0px 5px 30px 10px var(--cor_green_highlight), inset 0px 0px 20px 5px var(--cor_green-shadow);
-        /*border: 3px solid var(--cor_green);*/
-    }
-
-    button.card-monster:hover {
-        transform: translate(none);
-        box-shadow: none;
     }
 }
