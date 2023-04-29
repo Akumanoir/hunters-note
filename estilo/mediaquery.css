@@ -185,7 +185,7 @@ TV: acima de 1200px
     header {
         background-image: url(../images/mhw-vanilla-bg-mobile.jpg);
     }
-    
+
     header, #gradient {
         height: 500px;
     }
@@ -249,6 +249,10 @@ TV: acima de 1200px
 
     div.monster-name div strong {
         font-size: 1.25em;
+    }
+
+    button.card-monster {
+        background-image: none;
     }
 
     .category_buttons:active {
