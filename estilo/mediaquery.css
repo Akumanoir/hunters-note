@@ -177,9 +177,15 @@ TV: acima de 1200px
 }
 
 @media (hover: none) and (pointer: coarse) and (max-width: 795px){
+
+    body {
+        background-image: none;
+    }
+
     header {
         background-image: url(../images/mhw-vanilla-bg-mobile.jpg);
     }
+    
     header, #gradient {
         height: 500px;
     }
