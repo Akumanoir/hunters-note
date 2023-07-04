@@ -1,0 +1,81 @@
+@keyframes float {
+    from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(3%);
+  }
+}
+
+@keyframes background-change {
+    0% {
+        background-image: url('../assets/backgorund/mhw-vanilla-bg.jpg');
+    }
+    40% {
+        background-image: url('../assets/backgorund/mhw-vanilla-bg.jpg');
+    }
+    50% {
+        background-image: url('../assets/backgorund/mhw-iceborne-bg.jpg');
+    }
+    100% {
+        background-image: url('../assets/backgorund/mhw-iceborne-bg.jpg');
+    }
+}
+
+@keyframes gradient-change {
+    0% {
+        background: radial-gradient(circle, transparent 0%, var(--gradient-color-green) 100%);
+    }
+    40% {
+        background: radial-gradient(circle, transparent 0%, var(--gradient-color-green) 100%);
+    }
+    50% {
+        background: radial-gradient(circle, rgba(238,174,202,0) 0%, var(--gradient-color-blue) 100%);
+    }
+    100% {
+        background: radial-gradient(circle, rgba(238,174,202,0) 0%, var(--gradient-color-blue) 100%);
+    }
+}
+
+@keyframes vanilla-logo {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes iceborne-logo {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes button-load {
+    from {
+        transform: translateY(6%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

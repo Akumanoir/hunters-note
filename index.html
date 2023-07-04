@@ -1,1332 +1,912 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hunter's Note</title>
 
-    <!-- <link rel="stylesheet" href="estilo/botoes.css"> -->
-    <link rel="stylesheet" href="estilo/desktop.css">
-    <link rel="stylesheet" href="estilo/mediaquery.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body onresize="changesize()">
-    <header>
-        <div id="gradient">
-            <div class="title_container" id="title_container">
-                <img src="images/mhw-vanilla-logo.png" alt="Monster Hunter World Logo">
-                <!-- <div id="title">Hunter's Note</div> -->
-            </div>
-        </div>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <header class="grid">
+      <img src="./assets/logo/mhw-vanilla.png" alt="Monster Hunter World: Logo do jogo.">
+      <img src="./assets/logo/mhw-iceborne.png" alt="Monster Hunter World Iceborne: Logo do jogo e sua expanção.">
     </header>
     <main>
-        <div class="container" id="container">
-            <div class="top" id="top">
-                <span class="material-symbols-outlined" onclick="menu()">
-                    menu
-                    </span>
-                <form action="nao-tem.php" method="get">
-                    <label for="search">Pesquisa</label>
-                    <div id="search_container">
-                        <span class="material-symbols-outlined">
-                            search
-                            </span>
-                        <input type="search" name="search" id="search" placeholder="Search name">
-                    </div>
-                </form>
-            </div>
-            <div class="area_all" id="area_all">
-                <div class="left-container" id="lefty">
-                    <ul>
-                        <li>
-                            <button class="category_buttons" onclick="tudo()">
-                                <span>All</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons" id="fanged" onclick="fangedWyvern()">
-                                <span>Fanged Wyverns</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons" id="beasts" onclick="fangedBeasts()">
-                                <span>Fanged Beasts</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons bird" onclick="birdWyverns()">
-                                <span>Bird Wyverns</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons brute" onclick="bruteWyverns()">
-                                <span>Brute Wyverns</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons flying" onclick="flyingWyverns()">
-                                <span>Flying Wyverns</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons piscine" onclick="piscineWyverns()">
-                                <span>Piscine Wyverns</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons elder" onclick="elderDragons()">
-                                <span>Elder Dragons</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons relic" onclick="relicts()">
-                                <span>Relicts</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="category_buttons small" onclick="smallMonsters()">
-                                <span>Small Monsters</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Start button div -->
-                <div class="right-container">
-                    <div class="all" id="list-monsters">
-                        <button class="card-monster fanged-wyverns" id="01">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Great_Jagras_Icon.png" alt="button info Great Jargas">
-                            </div>
-                            <div class="monster-name">
-                                <div>
-                                    <strong>Great Jargas</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster bird-wyverns" id="02">
-                            <div class="image">
-                                <img src="images/button-icon/MHW-Kulu-Ya-Ku_Icon.png" alt="button info kulu-ya-ku">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Kulu-ya-ku</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster bird-wyverns" id="03">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Pukei-Pukei_Icon.png" alt="button info Pukei-Pukei">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Pukei-Pukei</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="04">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Barroth_Icon.png" alt="button info Barroth">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Barroth</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster piscine-wyverns" id="05">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Jyuratodus_Icon.png" alt="button info Jyuratodus">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Jyuratodus</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="06">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Tobi-Kadachi_Icon.png" alt="button info Tobi-Kadachi">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Tobi-Kadachi</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="07">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Anjanath_Icon.png" alt="button info Anjanath">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Anjanath</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="08">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Rathian_Icon.png" alt="button info Rathian">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Rathian</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster bird-wyverns" id="09">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Tzitzi-Ya-Ku_Icon.png" alt="button info Tzitzi-Ya-Ku">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Tzitzi-Ya-Ku</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="10">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Paolumu_Icon.png" alt="button info Paolumu">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Paolumu</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="11">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Great_Girros_Icon.png" alt="button info Great Girros">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Great Girros</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="12">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Radobaan_Icon.png" alt="button info Radobaan">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Radobaan</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="13">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Legiana_Icon.png" alt="button info Legiana">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Legiana</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="14">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Odogaron_Icon.png" alt="button info Odogaron">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Odogaron</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="15">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Rathalos_Icon.png" alt="button info Rathalos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Rathalos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="16">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Diablos_Icon.png" alt="button info Diablos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Diablos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="17">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Kirin_Icon.png" alt="button info Kirin">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Kirin</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="18">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Zorah_Magdaros_Icon.png" alt="button info Zorah Magdaros">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Zorah Magdaros</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="19">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Dodogama_Icon.png" alt="button info Dodogama">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Dodogama</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="20">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Pink_Rathian_Icon.png" alt="button info Pink Rathian">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Pink Rathian</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="21">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Bazelgeuse_Icon.png" alt="button info Bazelgeuse">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Bazelgeuse</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="22">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Deviljho_Icon.png" alt="button info Deviljho">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Deviljho</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster piscine-wyverns" id="23">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Lavasioth_Icon.png" alt="button info Lavasioth">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Lavasioth</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="24">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Uragaan_Icon.png" alt="button info Uragaan">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Uragaan</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="25">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Azure_Rathalos_Icon.png" alt="button info Azure Rathalos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Azure Rathalos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="26">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Nergigante_Icon.png" alt="button info Nergigante">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Nergigante</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="27">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Kushala_Daora_Icon.png" alt="button info Kushala Daora">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Kushala Daora</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="28">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Black_Diablos_Icon.png" alt="button info Black Diablos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Black Diablos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="29">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Teostra_Icon.png" alt="button info Teostra">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Teostra</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="30">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Lunastra_Icon.png" alt="button info Lunastra">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Lunastra</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="31">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Vaal_Hazak_Icon.png" alt="button info Vaal Hazak">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Vaal Hazak</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="32">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Xeno_jiiva_Icon.png" alt="button info Xeno&#8217;jiiva">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Xeno&#8217;jiiva</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster piscine-wyverns" id="33">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Beotodus_Icon.png" alt="button info Beotodus">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Beotodus</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="34">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Banbaro_Icon.png" alt="button info Banbaro">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Banbaro</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="35">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Brachydios_Icon.png" alt="button info Brachydios">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Brachydios</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="36">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Tigrex_Icon.png" alt="button info Tigrex">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Tigrex</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-beasts" id="37">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Rajang_Icon.png" alt="button info Rajang">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Rajang</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="38">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Nargacuga_Icon.png" alt="button info Nargacuga">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Nargacuga</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="39">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Barioth_Icon.png" alt="button info Barioth">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Barioth</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="40">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Glavenus_Icon.png" alt="button info Glavenus">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Glavenus</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="41">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Zinogre_Icon.png" alt="button info Zinogre">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Zinogre</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster bird-wyverns" id="42">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Yian_Garuga_Icon.png" alt="button info Yian Garuga">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Yian Garuga</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="43">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Velkhana_Icon.png" alt="button info Velkhana">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Velkhana</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="44">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Namielle_Icon.png" alt="button info Namielle">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Namielle</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="45">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Fulgur_Anjanath_Icon.png" alt="button info Fulgur Anjanath">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Fulgur Anjanath</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="46">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Acidic_Glavenus_Icon.png" alt="button info Acidic Glavenus">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Acidic Glavenus</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="47">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Ebony_Odogaron_Icon.png" alt="button info Ebony Odogaron">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Ebony Odogaron</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="48">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Nightshade_Paolumu_Icon.png" alt="button info Nightshade Paolumu">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Nightshade <br> Paolumu</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="49">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Shrieking_Legiana_Icon.png" alt="button info Shrieking Legiana">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Shrieking <br> Legiana</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster bird-wyverns" id="50">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Coral_Pukei-Pukei_Icon.png" alt="button info Coral Pukei-Pukei">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Coral <br> Pukei-Pukei</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="51">
-                            <div class="image">
-                                <img src="https://i.pinimg.com/originals/ef/87/7f/ef877fcd38d74752b2d70a11eaed8eb3.png" alt="button info Frostfang Barioth">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Frostfang <br> Barioth</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="52">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Seething_Bazelgeuse_Icon.png" alt="button info Seething Bazelgeuse">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Seething <br> Bazelgeuse</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="53">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Savage_Deviljho_Icon.png" alt="button info Savage Deviljho">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Savage Deviljho</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster brute-wyverns" id="54">
-                            <div class="image">
-                                <img src="https://i.pinimg.com/originals/05/a3/8a/05a38a56162769ba53402232195e897f.png" alt="button info Raging Brachydios">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Raging <br> Brachydios</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="55">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Ruiner_Nergigante_Icon.png" alt="button info Ruiner Nergigante">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Ruiner <br> Nergigante</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-beasts" id="56">
-                            <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-furious_rajang_icon.png" alt="button info Furious Rajang">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Furious Rajang</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="57">
-                            <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-gold_rathian_icon.png" alt="button info Safi'jiiva">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Gold Rathian</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="58">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Safi-Jiiva-Icon.png" alt="button info Safi'jiiva">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Safi&#8217;jiiva</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="59">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Shara_Ishvalda_Icon.png" alt="button info Shara Ishvalda">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Shara Ishvalda</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="60">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Brute_Tigrex_Icon.png" alt="button info Brute Tigrex">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Brute Tigrex</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster flying-wyverns" id="61">
-                            <div class="image">
-                                <img src="https://i.pinimg.com/originals/7a/64/d2/7a64d2bfea4aa47dc4308326ded60700.png" alt="button info Silver Rathalos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Silver Rathalos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="62">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Viper_Tobi-Kadachi_Icon.png" alt="button info Viper Tobi-Kadachi">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Viper <br> Tobi-Kadachi</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="63">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Blackveil_Vaal_Hazak_Icon.png" alt="button info Blackveil Vaal Hazak">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Blackveil <br> Vaal Hazak</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster bird-wyverns" id="64">
-                            <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-scarred_yian_garuga_icon.png" alt="button info Scarred Yian Garuga">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Scarred Yian <br> Garuga</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster fanged-wyverns" id="65">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI-Stygian_Zinogre_Icon.png" alt="button info Stygian Zinogre">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Stygian Zinogre</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="66">
-                            <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-alatreon_icon.png" alt="button info Alatreon">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Alatreon</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="67">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Kulve_Taroth_Icon.png" alt="button info Kulve Taroth">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Kulve Taroth</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster relicts" id="68">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Leshen_Icon.png" alt="button info Leshen">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Leshen</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster relicts" id="69">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Ancient_Leshen_Icon.png" alt="button info Ancient Leshen">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Ancient Leshen</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="70">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Behemoth_Icon.png" alt="button info Behemoth">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Behemoth</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster elder-dragons" id="71">
-                            <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-fatalis_icon.png" alt="button info Fatalis">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Fatalis</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="72">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Anteka_Icon.png" alt="button info Anteka">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Anteka</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="73">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Apceros_Icon.png" alt="button info Apceros">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Apceros</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="74">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Aptonoth_Icon.png" alt="button info Aptonoth">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Aptonoth</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="75">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Barnos_Icon.png" alt="button info Barnos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Barnos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="76">
-                            <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-boaboa_icon.png" alt="button info Boaboa">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Boaboa</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="77">
-                            <div class="image">
-                                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-cortos_icon.png" alt="button info Cortos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Cortos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="78">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Gajalaka_Icon.png" alt="button info Gajalaka">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Gajalaka</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="79">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Gajau_Icon.png" alt="button info Gajau">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Gajau</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="80">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Gastodon_Icon.png" alt="button info Gastodon">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Gastodon</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters fanged-wyverns" id="81">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Girros_Icon.png" alt="button info Girros">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Girros</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="82">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Grimalkyne_Icon.png" alt="button info Grimalkyne">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Grimalkyne</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="83">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Hornetaur_Icon.png" alt="button info Hornetaur">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Hornetaur</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters fanged-wyverns" id="84">
-                            <div class="image">
-                                <img src="https://www.nicepng.com/png/full/135-1356453_mhw-jagras-icon-monster-hunter-world-jagras-icon.png" alt="button info Jargras">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Jargras</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="85">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Kelbi_Icon.png" alt="button info Kelbi">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Kelbi</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="86">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Kestodon_Icon.png" alt="button info Kestodon">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Kestodon</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="87">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Mernos_Icon.png" alt="button info Mernos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Mernos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="88">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Mosswine_Icon.png" alt="button info Mosswine">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Mosswine</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="89">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Noios_Icon.png" alt="button info Noios">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Noios</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="90">
-                            <div class="image">
-                                <img src="images/button-icon/MHWI_Popo_Icon.png" alt="button info Popo">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Popo</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="91">
-                            <div class="image">
-                                <img src="images/button-icon/mhw-raphinos_icon.png" alt="button info Raphinos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Raphinos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters fanged-wyverns" id="92">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Shamos_Icon.png" alt="button info Shamos">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Shamos</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="93">
-                            <div class="image">
-                                <img src="images/button-icon/MHW_Vespoid_Icon.png" alt="button info Vespoid">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Vespoid</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/mhw-icon-50.png" alt="Monster hunter icon">
-                                </div>
-                            </div>
-                        </button>
-                        <button class="card-monster small-monsters" id="94">
-                            <div class="image">
-                                <img src="https://mhworld.kiranico.com/storage/mhw/icon/ems063_ID.png" alt="button info Wulg">
-                            </div>
-                           <div class="monster-name">
-                                <div>
-                                    <strong>Wulg</strong>
-                                </div>
-                                <div class="icon">
-                                    <img src="images/iceborne-logo-50.png" alt="Iceborne icon">
-                                </div>
-                            </div>
-                        </button>
-                    </div>
-                    <div id="load_cont"><button id="load-more">Load more</button></div> 
-                </div>
-                <!-- End Button div -->
-            </div>
+      <section>
+        <div class="top">
+          <i class="ph-bold ph-list" data-select="show-filter"></i>
+          <form action="#" method="post">
+            <i class="ph-bold ph-magnifying-glass"></i>
+            <input type="search" name="monter-name" id="monster-name" placeholder="Pesquise por nome">
+          </form>
         </div>
+        <div class="content-wrapper">
+          <div class="select">
+            <ul>
+              <li class="category-buttons all-category">All</li>
+              <li class="category-buttons fanged-wyverns">Fanged Wyverns</li>
+              <li class="category-buttons fanged-beasts">Fanged Beasts</li>
+              <li class="category-buttons bird-wyverns">Bird Wyverns</li>
+              <li class="category-buttons brute-wyverns">Brute Wyverns</li>
+              <li class="category-buttons flying-wyverns">Flying Wyverns</li>
+              <li class="category-buttons piscine-wyverns">Piscine Wyverns</li>
+              <li class="category-buttons elder-dragons">Elder Dragons</li>
+              <li class="category-buttons relicts">Relicts</li>
+              <li class="category-buttons small-monsters">Small Monsters</li>
+            </ul>
+          </div>
+          <div class="content">
+            <div class="button-container grid">
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Great_Jagras_Icon.png" alt="Imagem para selecionar o monstro Grande Jargras">
+                </div>
+                <div class="info">
+                  <h3>Grande Jargras</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button bird-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW-Kulu-Ya-Ku_Icon.png" alt="Imagem para selecionar o monstro Kulu-ya-ku">
+                </div>
+                <div class="info">
+                  <h3>Kulu-ya-ku</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button bird-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Pukei-Pukei_Icon.png" alt="Imagem para selecionar o monstro Pukei-Pukei">
+                </div>
+                <div class="info">
+                  <h3>Pukei-Pukei</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Barroth_Icon.png" alt="Imagem para selecionar o monstro Barroth">
+                </div>
+                <div class="info">
+                  <h3>Barroth</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button piscine-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Jyuratodus_Icon.png" alt="Imagem para selecionar o monstro Jyuratodus">
+                </div>
+                <div class="info">
+                  <h3>Jyuratodus</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Tobi-Kadachi_Icon.png" alt="Imagem para selecionar o monstro Tobi-Kadachi">
+                </div>
+                <div class="info">
+                  <h3>Tobi-Kadachi</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Anjanath_Icon.png" alt="Imagem para selecionar o monstro Anjanath">
+                </div>
+                <div class="info">
+                  <h3>Anjanath</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Rathian_Icon.png" alt="Imagem para selecionar o monstro Rathian">
+                </div>
+                <div class="info">
+                  <h3>Rathian</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button bird-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Tzitzi-Ya-Ku_Icon.png" alt="Imagem para selecionar o monstro Tzitzi-Ya-Ku">
+                </div>
+                <div class="info">
+                  <h3>Tzitzi-Ya-Ku</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Paolumu_Icon.png" alt="Imagem para selecionar o monstro Paolomu">
+                </div>
+                <div class="info">
+                  <h3>Paolomu</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Great_Girros_Icon.png" alt="Imagem para selecionar o monstro Grande Girros">
+                </div>
+                <div class="info">
+                  <h3>Grande Girros</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Radobaan_Icon.png" alt="Imagem para selecionar o monstro Radobaan">
+                </div>
+                <div class="info">
+                  <h3>Radobaan</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Legiana_Icon.png" alt="Imagem para selecionar o monstro Legiana">
+                </div>
+                <div class="info">
+                  <h3>Legiana</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Odogaron_Icon.png" alt="Imagem para selecionar o monstro Odogaron">
+                </div>
+                <div class="info">
+                  <h3>Odogaron</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Rathalos_Icon.png" alt="Imagem para selecionar o monstro Rathalos">
+                </div>
+                <div class="info">
+                  <h3>Rathalos</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Diablos_Icon.png" alt="Imagem para selecionar o monstro Diablos">
+                </div>
+                <div class="info">
+                  <h3>Diablos</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Kirin_Icon.png" alt="Imagem para selecionar o monstro Kirin">
+                </div>
+                <div class="info">
+                  <h3>Kirin</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Zorah_Magdaros_Icon.png" alt="Imagem para selecionar o monstro Zorah Magdaros">
+                </div>
+                <div class="info">
+                  <h3>Zorah Magdaros</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Dodogama_Icon.png" alt="Imagem para selecionar o monstro Dodogama">
+                </div>
+                <div class="info">
+                  <h3>Dodogama</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Pink_Rathian_Icon.png" alt="Imagem para selecionar o monstro Rathian Rosa">
+                </div>
+                <div class="info">
+                  <h3>Rathian Rosa</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Bazelgeuse_Icon.png" alt="Imagem para selecionar o monstro Bazelgeuse">
+                </div>
+                <div class="info">
+                  <h3>Bazelgeuse</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Deviljho_Icon.png" alt="Imagem para selecionar o monstro Deviljho">
+                </div>
+                <div class="info">
+                  <h3>Deviljho</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button piscine-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Lavasioth_Icon.png" alt="Imagem para selecionar o monstro Lavasioth">
+                </div>
+                <div class="info">
+                  <h3>Lavasioth</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Uragaan_Icon.png" alt="Imagem para selecionar o monstro Uragaan">
+                </div>
+                <div class="info">
+                  <h3>Uragaan</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Azure_Rathalos_Icon.png" alt="Imagem para selecionar o monstro Rathalos Azure">
+                </div>
+                <div class="info">
+                  <h3>Rathalos Azure</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Nergigante_Icon.png" alt="Imagem para selecionar o monstro Nergigante">
+                </div>
+                <div class="info">
+                  <h3>Nergigante</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Kushala_Daora_Icon.png" alt="Imagem para selecionar o monstro Kushala Daora">
+                </div>
+                <div class="info">
+                  <h3>Kushala Daora</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Black_Diablos_Icon.png" alt="Imagem para selecionar o monstro Diablos negra">
+                </div>
+                <div class="info">
+                  <h3>Diablos Negra</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Teostra_Icon.png" alt="Imagem para selecionar o monstro Teostra">
+                </div>
+                <div class="info">
+                  <h3>Teostra</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Lunastra_Icon.png" alt="Imagem para selecionar o monstro Lunastra">
+                </div>
+                <div class="info">
+                  <h3>Lunastra</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Vaal_Hazak_Icon.png" alt="Imagem para selecionar o monstro Vaal Hazak">
+                </div>
+                <div class="info">
+                  <h3>Vaal Hazak</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHW_Xeno_jiiva_Icon.png" alt="Imagem para selecionar o monstro Xeno&#8217;jiiva">
+                </div>
+                <div class="info">
+                  <h3>Xeno&#8217;jiiva</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button piscine-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Beotodus_Icon.png" alt="Imagem para selecionar o monstro Beotodus">
+                </div>
+                <div class="info">
+                  <h3>Beotodus</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Banbaro_Icon.png" alt="Imagem para selecionar o monstro Banbaro">
+                </div>
+                <div class="info">
+                  <h3>Banbaro</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Brachydios_Icon.png" alt="Imagem para selecionar o monstro Brachytdios">
+                </div>
+                <div class="info">
+                  <h3>Brachydios</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Tigrex_Icon.png" alt="Imagem para selecionar o monstro Tigrex">
+                </div>
+                <div class="info">
+                  <h3>Tigrex</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-beasts">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Rajang_Icon.png" alt="Imagem para selecionar o monstro Rajang">
+                </div>
+                <div class="info">
+                  <h3>Rajang</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Nargacuga_Icon.png" alt="Imagem para selecionar o monstro Nargacuga">
+                </div>
+                <div class="info">
+                  <h3>Nargacuga</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Barioth_Icon.png" alt="Imagem para selecionar o monstro Barioth">
+                </div>
+                <div class="info">
+                  <h3>Barioth</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Glavenus_Icon.png" alt="Imagem para selecionar o monstro Glavenus">
+                </div>
+                <div class="info">
+                  <h3>Glavenus</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Zinogre_Icon.png" alt="Imagem para selecionar o monstro Zinogre">
+                </div>
+                <div class="info">
+                  <h3>Zinogre</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button bird-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Yian_Garuga_Icon.png" alt="Imagem para selecionar o monstro Yian Garuga">
+                </div>
+                <div class="info">
+                  <h3>Yian Garuga</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Velkhana_Icon.png" alt="Imagem para selecionar o monstro Velkhana">
+                </div>
+                <div class="info">
+                  <h3>Velkhana</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Namielle_Icon.png" alt="Imagem para selecionar o monstro Namielle">
+                </div>
+                <div class="info">
+                  <h3>Namielle</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Fulgur_Anjanath_Icon.png" alt="Imagem para selecionar o monstro Anjanath Fulgurante">
+                </div>
+                <div class="info">
+                  <h3>Anjanath Fulgurante</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Acidic_Glavenus_Icon.png" alt="Imagem para selecionar o monstro Glavenus Ácido">
+                </div>
+                <div class="info">
+                  <h3>Glavenus Ácido</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Ebony_Odogaron_Icon.png" alt="Imagem para selecionar o monstro Odogaron Negro">
+                </div>
+                <div class="info">
+                  <h3>Odogaron Negro</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Nightshade_Paolumu_Icon.png" alt="Imagem para selecionar o monstro Paolomu Beladona">
+                </div>
+                <div class="info">
+                  <h3>Paolomu Beladona</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Shrieking_Legiana_Icon.png" alt="Imagem para selecionar o monstro Legiana estridente">
+                </div>
+                <div class="info">
+                  <h3>Legiana Estridente</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button bird-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Coral_Pukei-Pukei_Icon.png" alt="Imagem para selecionar o monstro Coral Pukei-Pukei">
+                </div>
+                <div class="info">
+                  <h3>Coral Pukei-Pukei</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="https://i.pinimg.com/originals/ef/87/7f/ef877fcd38d74752b2d70a11eaed8eb3.png" alt="Imagem para selecionar o monstro Barioth presagélida">
+                </div>
+                <div class="info">
+                  <h3>Barioth Presagélida</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Seething_Bazelgeuse_Icon.png" alt="Imagem para selecionar o monstro Bazelgeuse Vulcânico">
+                </div>
+                <div class="info">
+                  <h3>Bazelgeuse Vulcânico</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="./assets/monsters-icon/MHWI_Savage_Deviljho_Icon.png" alt="Imagem para selecionar o monstro Deviljho selvagem">
+                </div>
+                <div class="info">
+                  <h3>Deviljho Selvagem</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button brute-wyverns">
+                <div class="top">
+                  <img src="https://i.pinimg.com/originals/05/a3/8a/05a38a56162769ba53402232195e897f.png" alt="Imagem para selecionar o monstro Brachydios Colérico">
+                </div>
+                <div class="info">
+                  <h3>Brachydios Colérico</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Ruiner_Nergigante_Icon.png" alt="Imagem para selecionar o monstro Nergigante Ferrenho">
+                </div>
+                <div class="info">
+                  <h3>Nergigante Ferrenho</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-beasts">
+                <div class="top">
+                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-furious_rajang_icon.png" alt="Imagem para selecionar o monstro Rajang Furioso">
+                </div>
+                <div class="info">
+                  <h3>Rajang Furioso</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-gold_rathian_icon.png" alt="Imagem para selecionar o monstro Rathian Dourada">
+                </div>
+                <div class="info">
+                  <h3>Rathian Dourada</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Safi-Jiiva-Icon.png" alt="Imagem para selecionar o monstro Safi'jiiva">
+                </div>
+                <div class="info">
+                  <h3>Safi'jiiva</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Shara_Ishvalda_Icon.png" alt="Imagem para selecionar o monstro Shara Ishvalda">
+                </div>
+                <div class="info">
+                  <h3>Shara Ishvalda</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Brute_Tigrex_Icon.png" alt="Imagem para selecionar o monstro Tigrex Bruto">
+                </div>
+                <div class="info">
+                  <h3>Tigrex Bruto</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button flying-wyverns">
+                <div class="top">
+                <img src="https://i.pinimg.com/originals/7a/64/d2/7a64d2bfea4aa47dc4308326ded60700.png" alt="Imagem para selecionar o monstro Rathalos prateado">
+                </div>
+                <div class="info">
+                  <h3>Rathalos Prateado</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Viper_Tobi-Kadachi_Icon.png" alt="Imagem para selecionar o monstro Tobi-Kadachi Vípero">
+                </div>
+                <div class="info">
+                  <h3>Tobi-Kadachi Vípero</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Blackveil_Vaal_Hazak_Icon.png" alt="Imagem para selecionar o monstro Vaal Hazak Velado">
+                </div>
+                <div class="info">
+                  <h3>Vaal Hazak Velado</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button bird-wyverns">
+                <div class="top">
+                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-scarred_yian_garuga_icon.png" alt="Imagem para selecionar o monstro Yian Garuga Escoriado">
+                </div>
+                <div class="info">
+                  <h3>Yian Garuga Escoriado</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI-Stygian_Zinogre_Icon.png" alt="Imagem para selecionar o monstro Zinogre Tenebrosos">
+                </div>
+                <div class="info">
+                  <h3>Zinogre Tenebroso</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-alatreon_icon.png" alt="Imagem para selecionar o monstro Alatreon">
+                </div>
+                <div class="info">
+                  <h3>Alatreon</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Kulve_Taroth_Icon.png" alt="Imagem para selecionar o monstro Kulve Taroth">
+                </div>
+                <div class="info">
+                  <h3>Kulve Taroth</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button relicts">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Leshen_Icon.png" alt="Imagem para selecionar o monstro Leshen">
+                </div>
+                <div class="info">
+                  <h3>Leshen</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button relicts">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Ancient_Leshen_Icon.png" alt="Imagem para selecionar o monstro Leshen Ancião">
+                </div>
+                <div class="info">
+                  <h3>Leshen Ancião</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Behemoth_Icon.png" alt="Imagem para selecionar o monstro Behemoth">
+                </div>
+                <div class="info">
+                  <h3>Behemoth</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button elder-dragons">
+                <div class="top">
+                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-fatalis_icon.png" alt="Imagem para selecionar o monstro Fatalis">
+                </div>
+                <div class="info">
+                  <h3>Fatalis</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Anteka_Icon.png" alt="Imagem para selecionar o monstro Anteka">
+                </div>
+                <div class="info">
+                  <h3>Anteka</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Apceros_Icon.png" alt="Imagem para selecionar o monstro Apceros">
+                </div>
+                <div class="info">
+                  <h3>Apceros</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Aptonoth_Icon.png" alt="Imagem para selecionar o monstro Aptonoth">
+                </div>
+                <div class="info">
+                  <h3>Aptonoth</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Barnos_Icon.png" alt="Imagem para selecionar o monstro Barnos">
+                </div>
+                <div class="info">
+                  <h3>Barnos</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-boaboa_icon.png" alt="Imagem para selecionar o monstro Boaboa">
+                </div>
+                <div class="info">
+                  <h3>Boaboa</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-cortos_icon.png" alt="Imagem para selecionar o monstro Cortos">
+                </div>
+                <div class="info">
+                  <h3>Cortos</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Gajalaka_Icon.png" alt="Imagem para selecionar o monstro Gajalaka">
+                </div>
+                <div class="info">
+                  <h3>Gajalaka</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Gajau_Icon.png" alt="Imagem para selecionar o monstro Gajau">
+                </div>
+                <div class="info">
+                  <h3>Gajau</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Gastodon_Icon.png" alt="Imagem para selecionar o monstro Gastodon">
+                </div>
+                <div class="info">
+                  <h3>Gastodon</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Girros_Icon.png" alt="Imagem para selecionar o monstro Girros">
+                </div>
+                <div class="info">
+                  <h3>Girros</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Grimalkyne_Icon.png" alt="Imagem para selecionar o monstro Grimalkyne">
+                </div>
+                <div class="info">
+                  <h3>Grimalkyne</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Hornetaur_Icon.png" alt="Imagem para selecionar o monstro Hornetaur">
+                </div>
+                <div class="info">
+                  <h3>Hornetaur</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="https://www.nicepng.com/png/full/135-1356453_mhw-jagras-icon-monster-hunter-world-jagras-icon.png" alt="Imagem para selecionar o monstro Jargras">
+                </div>
+                <div class="info">
+                  <h3>Jargras</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Kelbi_Icon.png" alt="Imagem para selecionar o monstro Kelbi">
+                </div>
+                <div class="info">
+                  <h3>Kelbi</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Kestodon_Icon.png" alt="Imagem para selecionar o monstro Kestodon">
+                </div>
+                <div class="info">
+                  <h3>Kestodon</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Mernos_Icon.png" alt="Imagem para selecionar o monstro Mernos">
+                </div>
+                <div class="info">
+                  <h3>Mernos</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Mosswine_Icon.png" alt="Imagem para selecionar o monstro Mosswine">
+                </div>
+                <div class="info">
+                  <h3>Mosswine</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Noios_Icon.png" alt="Imagem para selecionar o monstro Noios">
+                </div>
+                <div class="info">
+                  <h3>Noios</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_Popo_Icon.png" alt="Imagem para selecionar o monstro Popo">
+                </div>
+                <div class="info">
+                  <h3>Popo</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/mhw-raphinos_icon.png" alt="Imagem para selecionar o monstro Raphinos">
+                </div>
+                <div class="info">
+                  <h3>Raphinos</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters fanged-wyverns">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Shamos_Icon.png" alt="Imagem para selecionar o monstro Shamos">
+                </div>
+                <div class="info">
+                  <h3>Shamos</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHW_Vespoid_Icon.png" alt="Imagem para selecionar o monstro Vespoid">
+                </div>
+                <div class="info">
+                  <h3>Vespoid</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+              <button type="button" data-action="show-modal" class="monster-button small-monsters">
+                <div class="top">
+                <img src="./assets/monsters-icon/MHWI_wulg_icon.png" alt="Imagem para selecionar o monstro Wulg">
+                </div>
+                <div class="info">
+                  <h3>Wulg</h3>
+                  <img src="./assets/button-icon/iceborne-logo-50.png" alt="Imagem com o simbolo de Monster Hunter World: Iceborne">
+                </div>
+              </button>
+            </div>
+            <div class="load-more">
+              <p id="load-more">Load More</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <span>Placeholder</span>
+      <section class="grid">
+        <h2>Cristiano G. Reis Junior | Web developer</h2>
+        <div class="link-wrapper">
+          <a href="mailto:cristianoreisjr@outlook.com?subject=E-mail para Cristiano"><img src="./assets/social/outlook-logo.png" alt="Email"></a>
+          <a href="https://github.com/Akumanoir" target="_blank" rel="external"><img src="./assets/social/gitgub-logo.png" alt="Github"></a>
+          <a href="https://www.linkedin.com/in/cristiano-reis-6228b4215/" target="_blank" rel="external"><img src="./assets/social/linkedin-logo.png" alt="Linkedin"></a>
+        </div>
+      </section>
     </footer>
-
-    <script src="script/buttons.js"></script>
-</body>
+    <!-- <div data-modal class="modal-teste" style="display: none;"></div> -->
+    <script src="main.js"></script>
+  </body>
 </html>
