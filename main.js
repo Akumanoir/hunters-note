@@ -1,4 +1,5 @@
-let monsterButtons = [...document.querySelectorAll("[data-action]")]
+const monsterButtons = [...document.querySelectorAll("[data-action]")]
+const searchElement = document.querySelector("#monster-name")
 const loadMore = document.querySelector("p#load-more")
 const monsterFilter = [...document.querySelectorAll("li.category-buttons")]
 const filterBlock = document.querySelector("div.select")
@@ -44,6 +45,7 @@ function reload() {
     loadMore.style.display = "none"
   }
 }
+
 // Ativa o modal ---------------------------------------------------------
 for (let i = 0; i < monsterButtons.length; i++) {
   monsterButtons[i].addEventListener("click", () => {
@@ -168,3 +170,26 @@ for (let i = 0; i < monsterFilter.length; i++) {
     }
   })
 }
+
+//===================== Filtro por pesquisa ============================
+
+searchElement.addEventListener("input", () => {
+  if (searchElement.value != "") {
+    loadMore.style.display = "none"
+    for (let card of monsterButtons) {
+      let title = card.querySelector("h3")
+      title = title.textContent.toLowerCase()
+      let searchText = searchElement.value.toLowerCase()
+      if (!title.includes(searchText)) {
+        card.style.display = "none"
+      } else {
+        card.style.display = "flex"
+      }
+    }
+  } else {
+    for(let card of monsterButtons) {
+      card.style.display = "flex"
+      loadMore.style.display = "inline-block"
+    }
+  }
+})
