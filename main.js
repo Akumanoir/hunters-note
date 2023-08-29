@@ -47,26 +47,26 @@ function reload() {
 }
 
 // Ativa o modal ---------------------------------------------------------
-for (let i = 0; i < monsterButtons.length; i++) {
-  monsterButtons[i].addEventListener("click", () => {
-    let modal = [...document.querySelectorAll("[data-modal]")]
-    let monsterName = [...document.querySelectorAll("h3")]
-    let value = monsterName[i].innerHTML
-    // window.alert(`Informações de ${value} não disponível ${i}`)
-    if (modal[i] == undefined) {
-      window.alert(`Informações de ${value} não disponível. posição: ${i}`)
+
+monsterButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const modal = [...document.querySelectorAll("[data-modal]")]
+    const monsterName = [...document.querySelectorAll("h3")]
+    const value = monsterName[index].innerHTML
+    if (modal[index] == undefined) {
+      window.alert(`Informações de ${value} não disponível. posição: ${index}`)
     } else {
-      modal[i].style.display = "block"
-      console.log("funfa")
+      modal[index].style.display = "block"
+      console.log("funcionou")
     }
   })
-}
+})
 
 // Filtro de categoria ----------------------------------------------------
 
-for (let i = 0; i < monsterFilter.length; i++) {
-  monsterFilter[i].addEventListener("click", () => {
-    switch (monsterFilter[i]) {
+monsterFilter.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    switch (button) {
       case monsterFilter[0]:
         loadMore.style.display = "inline-block"
         for (var y = 0; y < monsterButtons.length; y++) {
@@ -169,7 +169,7 @@ for (let i = 0; i < monsterFilter.length; i++) {
         return
     }
   })
-}
+})
 
 //===================== Filtro por pesquisa ============================
 
