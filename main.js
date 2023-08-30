@@ -54,7 +54,7 @@ monsterButtons.forEach((button, index) => {
     const monsterName = [...document.querySelectorAll("h3")]
     const value = monsterName[index].innerHTML
     if (modal[index] == undefined) {
-      window.alert(`Informações de ${value} não disponível. posição: ${index}`)
+      window.alert(`${value} not available.`)
     } else {
       modal[index].style.display = "block"
       console.log("funcionou")
