@@ -21,18 +21,18 @@
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
-* {
+body {
   scrollbar-width: auto;
   scrollbar-color: white transparent;
 }
 /* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 1rem;
 }
-*::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: transparent;
 }
-*::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 1rem;
   border: .4rem solid white;
@@ -396,4 +396,145 @@ footer > section img {
   .monster-button {
     width: 15rem;
   }
+}
+
+/* =================== Modal ======================= */
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.middle {
+  scrollbar-width: auto;
+  scrollbar-color: rgb(192, 192, 192) transparent;
+}
+/* Chrome, Edge, and Safari */
+.middle::-webkit-scrollbar {
+  width: 8px;
+}
+
+.middle::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.middle::-webkit-scrollbar-thumb {
+  background-color: rgb(192, 192, 192);
+  border-radius: 10px;
+  
+}
+
+.modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(150, 150, 150, 0.4);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-modal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal_wrapper {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(131, 128, 130) 100%);
+  border-radius: 2rem;
+
+  max-width: 1000px;
+  height: 60rem;
+  display: flex;
+}
+
+.left_container {
+  border-right: .1rem solid rgba(131, 128, 130, 0.397);
+  padding: 2rem;
+
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.left_container img{
+  width: 40rem;
+}
+
+.right_container {
+  padding: 2rem;
+}
+
+.modal_wrapper .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.right_container .middle {
+  display: grid;
+  gap: 1.6rem;
+  height: calc(100% - 6.3rem);
+  padding-right: .8rem;
+  overflow-y: auto;
+}
+
+.table_wrapper {
+  display: grid;
+  gap: 1.6rem;
+}
+
+th, .stars_rank, td:has(img){
+  text-align: center;
+}
+
+td:has(img) img {
+  width: 1.8rem;
+}
+
+.stars_rank > div {
+  margin-bottom: .5rem;
+}
+
+.stars_rank > i {
+  color: #f0ff24;
+}
+
+th, td {
+  border: .1rem solid rgba(131, 128, 130, 0.397);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999rem;
+
+
+  cursor: pointer;
+  transition: transform 0.3s ease-out, box-shadow 0.2s ease-out;
+}
+
+.close-button > i {
+  font-weight: 700;
+  transition: color 0.2s ease-out;
+}
+
+.close-button:hover > i {
+  color: var(--color-green);
+}
+
+.close-button:hover {
+  transform: translate(-1%, -1%);
+  box-shadow: 0rem 0rem 1.5rem var(--color-green);
 }

@@ -1,4 +1,6 @@
 const monsterButtons = [...document.querySelectorAll("[data-action]")]
+const modalContainer = [...document.querySelectorAll("div.modal")]
+const closeButton = [...document.querySelectorAll("div.close-button")]
 const searchElement = document.querySelector("#monster-name")
 const loadMore = document.querySelector("p#load-more")
 const monsterFilter = [...document.querySelectorAll("li.category-buttons")]
@@ -50,15 +52,23 @@ function reload() {
 
 monsterButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
-    const modal = [...document.querySelectorAll("[data-modal]")]
     const monsterName = [...document.querySelectorAll("h3")]
     const value = monsterName[index].innerHTML
-    if (modal[index] == undefined) {
+    if (modalContainer[index] == undefined) {
       window.alert(`${value} not available.`)
     } else {
-      modal[index].style.display = "block"
+      modalContainer[index].classList.add("show-modal")
       console.log("funcionou")
     }
+  })
+})
+
+// Desativar o modal ---------------------------------------------------------
+
+closeButton.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    modalContainer[index].classList.remove("show-modal")
+    console.log("fechou")
   })
 })
 
