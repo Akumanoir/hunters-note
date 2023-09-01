@@ -115,12 +115,43 @@ td:has(img) img {
   width: 1.8rem;
 }
 
+.stars_rank > div {
+  margin-bottom: .5rem;
+}
+
 .stars_rank > i {
-  color: #f5ff67;
+  color: #f0ff24;
 }
 
 th, td {
   border: .1rem solid rgba(131, 128, 130, 0.397);
   border-radius: .5rem;
-  padding: .5rem;
+  padding: 1rem;
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999rem;
+
+
+  cursor: pointer;
+  transition: transform 0.3s ease-out, box-shadow 0.2s ease-out;
+}
+
+.close-button > i {
+  font-weight: 700;
+  transition: color 0.2s ease-out;
+}
+
+.close-button:hover > i {
+  color: var(--color-green);
+}
+
+.close-button:hover {
+  transform: translate(-1%, -1%);
+  box-shadow: 0rem 0rem 1.5rem var(--color-green);
 }
