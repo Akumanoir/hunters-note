@@ -19,7 +19,7 @@ export const monstersInfo = [
       "Kulu-ya-ku icon",
     ],
     mhwIcon: [
-      "../assets/button-icon/mhw-icon-50.png",
+      "./assets/button-icon/mhw-icon-50.png",
       "image of the Monster Hunter World logo",
     ],
   },
