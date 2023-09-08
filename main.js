@@ -1,4 +1,6 @@
-const monsterButtons = [...document.querySelectorAll("[data-action]")]
+import { monstersInfo } from "./mock/monsters.js"
+
+const buttonContainer = document.querySelector("#button-container")
 const modalContainer = [...document.querySelectorAll("div.modal")]
 const closeButton = [...document.querySelectorAll("div.close-button")]
 const searchElement = document.querySelector("#monster-name")
@@ -8,11 +10,28 @@ const filterBlock = document.querySelector("div.select")
 const showFilter = document.querySelector("[data-select]")
 let currentItem = 9
 
+// botões
+monstersInfo.map((element) => {
+  buttonContainer.innerHTML += `<button type="button" data-action="show-modal" class="monster-button ${element.type}">
+                <div class="top">
+                  <img src="${element.iconImage[0]}" alt="${element.iconImage[1]}">
+                </div>
+                <div class="info">
+                  <h3>${element.name}</h3>
+                  <img src="./assets/button-icon/mhw-icon-50.png" alt="image of the Monster Hunter World logo">
+                </div>
+              </button>`
+})
+
+const monsterButtons = [...document.querySelectorAll("[data-action]")]
+
+// ajuste de media query
 window.onload = function () {
   for (var i = 0; i < 9; i++) {
     monsterButtons[i].style.display = "flex"
   }
 }
+
 
 // Ativa as opções de filtrar por categoria celular
 
@@ -197,7 +216,7 @@ searchElement.addEventListener("input", () => {
       }
     }
   } else {
-    for(let card of monsterButtons) {
+    for (let card of monsterButtons) {
       card.style.display = "flex"
       loadMore.style.display = "inline-block"
     }
