@@ -18,7 +18,7 @@ monstersInfo.map((element) => {
                 </div>
                 <div class="info">
                   <h3>${element.name}</h3>
-                  <img src="./assets/button-icon/mhw-icon-50.png" alt="image of the Monster Hunter World logo">
+                  <img src="${element.mhwIcon[0]}" alt="${element.mhwIcon[1]}">
                 </div>
               </button>`
 })
