@@ -1,4 +1,4 @@
-              <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
+  <button type="button" data-action="show-modal" class="monster-button fanged-wyverns">
                 <div class="top">
                   <img src="./assets/monsters-icon/MHW_Great_Jagras_Icon.png" alt="Great Jargras Icon">
                 </div>

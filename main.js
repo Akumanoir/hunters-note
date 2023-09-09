@@ -14,7 +14,7 @@ let currentItem = 9
 monstersInfo.map((element) => {
   buttonContainer.innerHTML += `<button type="button" data-action="show-modal" class="monster-button ${element.type}">
                 <div class="top">
-                  <img src="${element.iconImage[0]}" alt="${element.iconImage[1]}">
+                  <img src="${element.imageSrc[0][0]}" alt="${element.imageSrc[0][1]}">
                 </div>
                 <div class="info">
                   <h3>${element.name}</h3>
@@ -31,7 +31,6 @@ window.onload = function () {
     monsterButtons[i].style.display = "flex"
   }
 }
-
 
 // Ativa as opções de filtrar por categoria celular
 
