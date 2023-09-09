@@ -12,17 +12,18 @@ let currentItem = 9
 
 // botões
 monstersInfo.map((element) => {
-  buttonContainer.innerHTML += `<button type="button" data-action="show-modal" class="monster-button ${element.type}">
-                <div class="top">
-                  <img src="${element.imageSrc[0][0]}" alt="${element.imageSrc[0][1]}">
-                </div>
-                <div class="info">
-                  <h3>${element.name}</h3>
-                  <img src="${element.mhwIcon[0]}" alt="${element.mhwIcon[1]}">
-                </div>
-              </button>`
+  buttonContainer.innerHTML += `
+    <button type="button" data-action="show-modal" class="monster-button ${element.type}">
+      <div class="top">
+        <img src="${element.imageSrc[0][0]}" alt="${element.imageSrc[0][1]}">
+      </div>
+      <div class="info">
+        <h3>${element.name}</h3>
+        <img src="${element.mhwIcon[0]}" alt="${element.mhwIcon[1]}">
+      </div>
+    </button>
+  `
 })
-
 const monsterButtons = [...document.querySelectorAll("[data-action]")]
 
 // ajuste de media query
