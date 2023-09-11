@@ -1,24 +1,25 @@
 // carregar modais
 
-export function loadModal(monsterInfo) {
+// import { monstersInfo } from "../mock/monsters.js"
+
+export function loadModal(monstersInfo) {
   const loadModalContainer = document.querySelector("#load_modal")
+
   loadModalContainer.innerHTML = `
     <div class="modal_background grid modal">
       <div class="modal_wrapper">
         <div class="left_container">
-          <img src="${monsterInfo.imageSrc[1][0]}" alt="${monsterInfo.imageSrc[1][1]}">
+          <img src="${monstersInfo.imageSrc[1][0]}" alt="${monstersInfo.imageSrc[1][1]}">
         </div>
         <div class="right_container">
           <div class="top">
-            <h2>${monsterInfo.name}</h2>
+            <h2>${monstersInfo.name}</h2>
             <div class="close-button"><i class="ph ph-x"></i></div>
           </div>
           <div class="middle grid">
             <div class="table_wrapper grid">
               <h3>World information</h3>
-              <p>The pack leader of the Jagras. When hungry, Great Jagras are known to attack monsters even stronger than
-                themselves. It
-                balloons to unbelievable proportions after swallowing prey.</p>
+              <p>${isDescriptionEmpty(monstersInfo.description)}</p>
             </div>
             <div class="table_wrapper grid">
               <h3>Weakness</h3>
@@ -469,4 +470,12 @@ export function loadModal(monsterInfo) {
   })
 
   console.log(closeButton)
+}
+
+function isDescriptionEmpty(description) {
+  if(description == "") {
+    return "Unavailable"
+  } else {
+    return description
+  }
 }
