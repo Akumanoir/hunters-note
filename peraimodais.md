@@ -1,72 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hunter&#8217s Note</title>
-
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  </head>
-  <body>
-    <header class="grid">
-      <img src="./assets/logo/mhw-vanilla.png" alt="the image logo of the game: Monster Hunter World">
-      <img src="./assets/logo/mhw-iceborne.png" alt="the image logo of the game expansion: Monster Hunter World: Iceborne">
-    </header>
-    <main>
-      <section>
-        <div class="top">
-          <i class="ph-bold ph-list" data-select="show-filter"></i>
-          <form action="#" method="post">
-            <i class="ph-bold ph-magnifying-glass"></i>
-            <!-- Colocar um label aqui -->
-            <label for="monster-name" class="sr-only">Search field by name: </label>
-            <input type="text" name="monter-name" id="monster-name" placeholder="Search by name">
-          </form>
-        </div>
-        <div class="content-wrapper">
-          <div class="select">
-            <ul>
-              <li class="category-buttons all-category">All</li>
-              <li class="category-buttons fanged-wyverns">Fanged Wyverns</li>
-              <li class="category-buttons fanged-beasts">Fanged Beasts</li>
-              <li class="category-buttons bird-wyverns">Bird Wyverns</li>
-              <li class="category-buttons brute-wyverns">Brute Wyverns</li>
-              <li class="category-buttons flying-wyverns">Flying Wyverns</li>
-              <li class="category-buttons piscine-wyverns">Piscine Wyverns</li>
-              <li class="category-buttons elder-dragons">Elder Dragons</li>
-              <li class="category-buttons relicts">Relicts</li>
-              <li class="category-buttons small-monsters">Small Monsters</li>
-            </ul>
-          </div>
-          <div class="content">
-            <div id="button-container" class="button-container grid">
-
-            </div>
-            <div class="load-more">
-              <p id="load-more">Load More</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <section class="grid">
-        <h2>Cristiano G. Reis Junior | Web developer</h2>
-        <div class="link-wrapper">
-          <a href="mailto:cristianoreisjr@outlook.com?subject=E-mail para Cristiano"><img src="./assets/social/outlook-logo.png" alt="Email"></a>
-          <a href="https://github.com/Akumanoir" target="_blank" rel="external"><img src="./assets/social/gitgub-logo.png" alt="Github"></a>
-          <a href="https://www.linkedin.com/in/cristiano-reis-6228b4215/" target="_blank" rel="external"><img src="./assets/social/linkedin-logo.png" alt="Linkedin"></a>
-        </div>
-      </section>
-    </footer>
-
-    <!-- great jargras Modal -->
-    <!-- <div class="modal_background grid modal">
+<!-- great jargras Modal -->
+<div class="modal_background grid modal">
       <div class="modal_wrapper">
         <div class="left_container">
           <img src="./assets/modals/MHW-Great_Jagras.png" alt="An image of a great jargras">
@@ -521,9 +454,9 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- kulu-ya-ku modal -->
-    <!-- <div class="modal_background grid modal">
+    <div class="modal_background grid modal">
       <div class="modal_wrapper">
         <div class="left_container">
           <img src="./assets/modals/MHW-kulu-ya-ku.png" alt="An image of a Kulu-ya-ku carring a rock">
@@ -959,9 +892,9 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- Pukei-pukei Modal -->
-    <!-- <div class="modal_background grid modal">
+    <div class="modal_background grid modal">
       <div class="modal_wrapper">
         <div class="left_container">
           <img src="./assets/modals/MHW-Pukei-Pukei.png" alt="An image of a pukei-pukei">
@@ -1488,9 +1421,9 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- Barroth modal -->
-    <!-- <div class="modal_background grid modal">
+    <div class="modal_background grid modal">
       <div class="modal_wrapper">
         <div class="left_container">
           <img src="./assets/modals/MHW-Barroth.png" alt="An image of a pukei-pukei">
@@ -1976,9 +1909,4 @@
           </div>
         </div>
       </div>
-    </div> -->
-    <div id="load_modal"></div>
-    <script src="main.js" type="module"></script>
-    <!-- <script type="module" src="./src/modais.js"></script> -->
-  </body>
-</html>
+    </div>

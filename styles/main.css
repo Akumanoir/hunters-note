@@ -434,15 +434,12 @@ footer > section img {
 
   display: grid;
   place-content: center;
-
-  opacity: 0;
-  pointer-events: none;
 }
 
-.show-modal {
+/* .show-modal {
   opacity: 1;
   pointer-events: all;
-}
+} */
 
 .modal_wrapper {
   background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(131, 128, 130) 100%);

@@ -1,8 +1,7 @@
 import { monstersInfo } from "./mock/monsters.js"
+import { loadModal } from "./src/modais.js"
 
 const buttonContainer = document.querySelector("#button-container")
-const modalContainer = [...document.querySelectorAll("div.modal")]
-const closeButton = [...document.querySelectorAll("div.close-button")]
 const searchElement = document.querySelector("#monster-name")
 const loadMore = document.querySelector("p#load-more")
 const monsterFilter = [...document.querySelectorAll("li.category-buttons")]
@@ -10,7 +9,7 @@ const filterBlock = document.querySelector("div.select")
 const showFilter = document.querySelector("[data-select]")
 let currentItem = 9
 
-// botões
+// carregar botões
 monstersInfo.map((element) => {
   buttonContainer.innerHTML += `
     <button type="button" data-action="show-modal" class="monster-button ${element.type}">
@@ -24,9 +23,9 @@ monstersInfo.map((element) => {
     </button>
   `
 })
-const monsterButtons = [...document.querySelectorAll("[data-action]")]
 
 // ajuste de media query
+const monsterButtons = [...document.querySelectorAll("[data-action]")]
 window.onload = function () {
   for (var i = 0; i < 9; i++) {
     monsterButtons[i].style.display = "flex"
@@ -71,23 +70,7 @@ function reload() {
 
 monsterButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
-    const monsterName = [...document.querySelectorAll("h3")]
-    const value = monsterName[index].innerHTML
-    if (modalContainer[index] == undefined) {
-      window.alert(`${value} not available.`)
-    } else {
-      modalContainer[index].classList.add("show-modal")
-      console.log("funcionou")
-    }
-  })
-})
-
-// Desativar o modal ---------------------------------------------------------
-
-closeButton.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    modalContainer[index].classList.remove("show-modal")
-    console.log("fechou")
+    loadModal(monstersInfo[index])
   })
 })
 
@@ -222,3 +205,5 @@ searchElement.addEventListener("input", () => {
     }
   }
 })
+
+
