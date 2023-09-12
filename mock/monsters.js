@@ -96,7 +96,7 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Anjanath_Icon.png`, `Anjanath icon`],
       [
-        `./assets/modals/MHW-anjanath.png`,
+        `./assets/modals/MHW-Anjanath.png`,
         `An image of a Anjanath`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
