@@ -19,7 +19,7 @@ export function loadModal(monstersInfo) {
           <div class="middle grid">
             <div class="table_wrapper grid">
               <h3>World information</h3>
-              <p>${isDescriptionEmpty(monstersInfo.description)}</p>
+              <p style = "text-align: justify;">${isDescriptionEmpty(monstersInfo.description)}</p>
             </div>
             <div class="table_wrapper grid">
               <h3>Weakness</h3>
@@ -466,7 +466,6 @@ export function loadModal(monstersInfo) {
   const closeButton = document.querySelector("div.close-button")
   closeButton.addEventListener("click", () => {
     loadModalContainer.removeChild(modalContainer)
-    console.log("fechou")
   })
 
   console.log(closeButton)

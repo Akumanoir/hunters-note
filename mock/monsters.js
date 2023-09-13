@@ -457,7 +457,7 @@ export const monstersInfo = [
   {
     name: `Teostra`,
     type: `elder-dragons`,
-    description: ``,
+    description: `A brutal elder dragon wreathed in flames that spits blazing fire. Teostra are of such a fierce and deadly nature that the Guild closely monitors their movements.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Teostra_Icon.png`, `Teostra icon`],
       [
@@ -473,7 +473,7 @@ export const monstersInfo = [
   {
     name: `Lunastra`,
     type: `elder-dragons`,
-    description: ``,
+    description: ` A rare female Elder Dragon that litters the air with hot blue dust. Reports of it traveling with her mate, Teostra, are still unconfirmed.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Lunastra_Icon.png`, `Lunastra icon`],
       [
@@ -489,7 +489,7 @@ export const monstersInfo = [
   {
     name: `Vaal Hazak`,
     type: `elder-dragons`,
-    description: ``,
+    description: `A grotesque Elder Dragon, that inhabits the deepest part of the Rotten Vale. It uses the fatal vapor of the vale in what appears to be a symbiotic relationship.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Vaal_Hazak_Icon.png`, `Vaal Hazak icon`],
       [
@@ -505,7 +505,7 @@ export const monstersInfo = [
   {
     name: `Xeno&#8217;jiiva`,
     type: `elder-dragons`,
-    description: ``,
+    description: `A new species discovered in the depths of the Elder&#8217;s Recess. Its relationship to the other elder dragons is unclear, as is its ecology.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHW_Xeno_jiiva_Icon.png`,
@@ -524,7 +524,8 @@ export const monstersInfo = [
   {
     name: `Beotodus`,
     type: `piscine-wyverns`,
-    description: ``,
+    description: `A piscine wyvern that uses the sharp fin on its head to cut through the frozen soil, swimming freely through the snow.<br/>
+    Can often be seen hurling snow at its prey using its leg fins."`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Beotodus_Icon.png`, `Beotodus icon`],
       [
@@ -540,7 +541,8 @@ export const monstersInfo = [
   {
     name: `Banbaro`,
     type: `brute-wyverns`,
-    description: ``,
+    description: `A monster with two giant horns, like a running brick wall.
+    It charges at threats while digging its massive horns in the ground, sometimes picking up entire trees along the way.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Banbaro_Icon.png`, `Banbaro icon`],
       [
@@ -556,7 +558,7 @@ export const monstersInfo = [
   {
     name: `Brachydios`,
     type: `brute-wyverns`,
-    description: ``,
+    description: `This marine-blue brute wyvern uses its saliva to prime the sticky slime coating its massive arms, rendering it highly explosive`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Brachydios_Icon.png`, `Brachydios icon`],
       [
@@ -572,7 +574,7 @@ export const monstersInfo = [
   {
     name: `Tigrex`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `A flying wyvern straight out of prehistory, known for its deafening roar and powerful legs that drive its overwhelming charge.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Tigrex_Icon.png`, `Tigrex icon`],
       [
@@ -588,7 +590,7 @@ export const monstersInfo = [
   {
     name: `Rajang`,
     type: `fanged-beasts`,
-    description: ``,
+    description: `An ultra-aggressive creature that few have a chance of surviving against. Sports powerful arms that pack a punch, and turns gold when angry.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Rajang_Icon.png`, `Rajang icon`],
       [
@@ -604,7 +606,8 @@ export const monstersInfo = [
   {
     name: `Nargacuga`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `A flying wyvern covered in pitch black fur.
+    It is extremely agile, especially on the ground, moving with explosive bursts of speed.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Nargacuga_Icon.png`, `Nargacuga icon`],
       [
@@ -620,7 +623,7 @@ export const monstersInfo = [
   {
     name: `Barioth`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `The snow-white flying wyvern with huge tusks found in the frozen tundra. It uses its forelegs and tail to traverse ice with ease.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Barioth_Icon.png`, `Barioth icon`],
       [
@@ -636,7 +639,7 @@ export const monstersInfo = [
   {
     name: `Glavenus`,
     type: `brute-wyverns`,
-    description: ``,
+    description: `A brute wyvern that wields its heavy blue tail like a blade. It grows hotter and more keen with each strike until it glows red.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Glavenus_Icon.png`, `Glavenus icon`],
       [
@@ -652,7 +655,7 @@ export const monstersInfo = [
   {
     name: `Zinogre`,
     type: `fanged-wyverns`,
-    description: ``,
+    description: `Lightning courses through the fur and unique plating of this fanged wyvern. It is most deadly in its supercharged state`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Zinogre_Icon.png`, `Zinogre icon`],
       [
@@ -668,7 +671,7 @@ export const monstersInfo = [
   {
     name: `Yian Garuga`,
     type: `bird-wyverns`,
-    description: ``,
+    description: `A short-tempered bird wyvern marked by its hard, black scales and impressive mane. It strikes with its distinctive beak.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Yian_Garuga_Icon.png`, `Yian Garuga icon`],
       [
@@ -684,7 +687,8 @@ export const monstersInfo = [
   {
     name: `Velkhana`,
     type: `elder-dragons`,
-    description: ``,
+    description: `An elder dragon with the power to freeze all in its path.
+    According to legend, it can control the cold, and use its freezing breath to conjure massive spires of ice out of nowhere.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Velkhana_Icon.png`, `Velkhana icon`],
       [
@@ -700,7 +704,7 @@ export const monstersInfo = [
   {
     name: `Namielle`,
     type: `elder-dragons`,
-    description: ``,
+    description: `An Elder Dragon said to be able to command water and use it as a shield. Though very few sightings have ever been reported, they mention 'exploding water' and 'bright glowing lights.' Its existence remains shrouded in mystery.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Namielle_Icon.png`, `Namielle icon`],
       [
@@ -716,7 +720,7 @@ export const monstersInfo = [
   {
     name: `Fulgur Anjanath`,
     type: `brute-wyverns`,
-    description: ``,
+    description: `With every attack, this Anjanath subspecies fortifies itself with electricity that it charges within its jaws and dorsal membrane.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Fulgur_Anjanath_Icon.png`,
@@ -735,7 +739,7 @@ export const monstersInfo = [
   {
     name: `Acidic Glavenus`,
     type: `brute-wyverns`,
-    description: ``,
+    description: `A new subspecies to the ferocious Glavenus, the Acidic Glavenus features a sulphur covered tail. Found only in the rotting areas of the New World, a corrosive fluid has crystallized on its tail, spraying acid with each swing that can apply a debuff to those that get caught in it.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Acidic_Glavenus_Icon.png`,
@@ -754,7 +758,7 @@ export const monstersInfo = [
   {
     name: `Ebony Odogaron`,
     type: `fanged-wyverns`,
-    description: ``,
+    description: `This Odogaron subspecies is forever on the prowl for its next meal, and is often seen carrying fresh kills in its mouth. Reports indicate it goes into a frenzy upon eating.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Ebony_Odogaron_Icon.png`,
@@ -773,7 +777,7 @@ export const monstersInfo = [
   {
     name: `Nightshade Paolomu`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `A Paolumu subspecies capable of putting prey to sleep. It produces a powerful sedative gas stored within its throat sack that it can expel and scatter to knock unwary foes out.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Nightshade_Paolumu_Icon.png`,
@@ -792,7 +796,7 @@ export const monstersInfo = [
   {
     name: `Shrieking Legiana`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `A Legiana variant shrouded in white frost. It specializes in freezing prey with the powerful chill it emits, then swooping down to strike at them from overhead.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Shrieking_Legiana_Icon.png`,
@@ -811,7 +815,7 @@ export const monstersInfo = [
   {
     name: `Coral Pukei-Pukei`,
     type: `bird-wyverns`,
-    description: ``,
+    description: `A bird wyvern that stockpiles water inside its body, fortified by the plant life it consumes. When threatened it can expel a powerful stream from its mouth or tail.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Coral_Pukei-Pukei_Icon.png`,
@@ -830,7 +834,7 @@ export const monstersInfo = [
   {
     name: `Frostfang Barioth`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `A Barioth variant capable of spewing a sub-zero breath attack that it uses to slow down prey. Be careful, as this attack can freeze you as well.`,
     imageSrc: [
       [
         `https://i.pinimg.com/originals/ef/87/7f/ef877fcd38d74752b2d70a11eaed8eb3.png`,
@@ -849,7 +853,7 @@ export const monstersInfo = [
   {
     name: `Seething Bazelgeuse`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `The scales of this Bazelgeuse variant burn hotter than normal increasing in number and explosion radius as time passes.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Seething_Bazelgeuse_Icon.png`,
@@ -868,7 +872,7 @@ export const monstersInfo = [
   {
     name: `Savage Deviljho`,
     type: `brute-wyverns`,
-    description: ``,
+    description: `A mutated Deviljho variant, driven mad by its overpowering hunger. It will attempt to feed on all it sees.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Savage_Deviljho_Icon.png`,
@@ -887,7 +891,7 @@ export const monstersInfo = [
   {
     name: `Raging Brachydios`,
     type: `brute-wyverns`,
-    description: ``,
+    description: `A Brachydios variant that is much larger than the normal species. The slime on its body will activate over time and detonate.`,
     imageSrc: [
       [
         `https://i.pinimg.com/originals/05/a3/8a/05a38a56162769ba53402232195e897f.png`,
@@ -906,7 +910,7 @@ export const monstersInfo = [
   {
     name: `Ruiner Nergigante`,
     type: `elder-dragons`,
-    description: ``,
+    description: `Countless battles have only hardened this Nergigante variant. In addition to healing, its spikes grow tougher as it loses health.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Ruiner_Nergigante_Icon.png`,
@@ -925,7 +929,7 @@ export const monstersInfo = [
   {
     name: `Furious Rajang`,
     type: `fanged-beasts`,
-    description: ``,
+    description: `A Rajang variant covered in golden fur. Utilizes severe ranged and wall-based attacks. It enters a glowing golden state when enraged.`,
     imageSrc: [
       [
         `https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-furious_rajang_icon.png`,
@@ -944,7 +948,7 @@ export const monstersInfo = [
   {
     name: `Gold Rathian`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `A rare gleaming gold-scaled Rathian species. When wreathed in hellfire, its breath grows more lethal and its tail swipes broader.`,
     imageSrc: [
       [
         `https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-gold_rathian_icon.png`,
@@ -963,7 +967,7 @@ export const monstersInfo = [
   {
     name: `Safi&#8217jiiva`,
     type: `elder-dragons`,
-    description: ``,
+    description: `The fully-grown form of Xeno'jiiva. It absorbs energy from its environment to heal itself and change the ecosystem.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Safi-Jiiva-Icon.png`,
@@ -982,7 +986,7 @@ export const monstersInfo = [
   {
     name: `Shara Ishvalda`,
     type: `elder-dragons`,
-    description: ``,
+    description: `A mysterious elder dragon able to manipulate the earth itself. Vibrations from its wingtips reshape the earth, denying hunters footing.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Shara_Ishvalda_Icon.png`,
@@ -1001,7 +1005,7 @@ export const monstersInfo = [
   {
     name: `Brute Tigrex`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `Blackish brown scales and a stronger roar set this Tigrex subspecies apart. Extremely aggressive, even by Tigrex standards.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Brute_Tigrex_Icon.png`,
@@ -1020,7 +1024,7 @@ export const monstersInfo = [
   {
     name: `Silver Rathalos`,
     type: `flying-wyverns`,
-    description: ``,
+    description: `A rare silver-scaled Rathalos species. When weathering in hellfire, its breath grows more lethal and it gains a new set of attacks.`,
     imageSrc: [
       [
         `https://i.pinimg.com/originals/7a/64/d2/7a64d2bfea4aa47dc4308326ded60700.png`,
@@ -1039,7 +1043,7 @@ export const monstersInfo = [
   {
     name: `Viper Tobi-Kadachi`,
     type: `fanged-wyverns`,
-    description: ``,
+    description: `The tail of this subspecies secretes a toxin while its fangs paralyze prey. It can also glide without climbing trees.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Viper_Tobi-Kadachi_Icon.png`,
@@ -1058,7 +1062,7 @@ export const monstersInfo = [
   {
     name: `Blackveil Vaal Hazak`,
     type: `elder-dragons`,
-    description: ``,
+    description: `A Vaal Hazak variant encrusted with spores that spew a torrent of toxic effluvium at any who draw close.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI_Blackveil_Vaal_Hazak_Icon.png`,
@@ -1077,7 +1081,7 @@ export const monstersInfo = [
   {
     name: `Scarred Yian Garuga`,
     type: `bird-wyverns`,
-    description: ``,
+    description: `A tempered Yian Garuga that survived a grueling battle with just a scar on its head. Be careful of its successive attacks.`,
     imageSrc: [
       [
         `https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-scarred_yian_garuga_icon.png`,
@@ -1096,7 +1100,7 @@ export const monstersInfo = [
   {
     name: `Stygian Zinogre`,
     type: `fanged-wyverns`,
-    description: ``,
+    description: `Has a symbiotic relationship with Dracophage Bugs, which it releases like bullets. Becomes even more dangerous when covered in light.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHWI-Stygian_Zinogre_Icon.png`,
@@ -1115,7 +1119,7 @@ export const monstersInfo = [
   {
     name: `Alatreon`,
     type: `elder-dragons`,
-    description: ``,
+    description: `Known as a symbol of destruction, people fear even uttering its name. It&#8217s rumoured to control all of the elements, but most, if not all, records of its existence have been burned.`,
     imageSrc: [
       [
         `https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-alatreon_icon.png`,
@@ -1134,7 +1138,7 @@ export const monstersInfo = [
   {
     name: `Kulve Taroth`,
     type: `elder-dragons`,
-    description: ``,
+    description: `An Elder Dragon that protects itself with a glittering coat of metal. Its ecology and coat differ with each appearance, thus the need for a thorough investigation.<br/> An exhaustive investigation is required in order to break Kulve Taroth's giant gold plated horns. Pursue the monster to learn more about it.<br/> Gather tracks and recruit hunters to help you further your investigation.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Kulve_Taroth_Icon.png`, `Kulve Taroth icon`],
       [
@@ -1150,7 +1154,7 @@ export const monstersInfo = [
   {
     name: `Leshen`,
     type: `relicts`,
-    description: ``,
+    description: `Dwelling deep inside the forest, these creatures use their innate magic to control all flora and fauna within their territory.<br/> Revolures and Jagras controlled by a Leshen are tough to approach, but the Igni Sign is very useful in fending off Leshen's lashing roots.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Leshen_Icon.png`, `Leshen icon`],
       [
@@ -1166,7 +1170,7 @@ export const monstersInfo = [
   {
     name: `Ancient Leshen`,
     type: `relicts`,
-    description: ``,
+    description: `An old leshen that arrived through a portal to assume control of the Ancient Forest. Sometimes revered as an indigenous deity.<br/> Ancient Leshens use their wisdom and tactical knowledge to curse hunters and send packs of wild Jagras after them.`,
     imageSrc: [
       [
         `./assets/monsters-icon/MHW_Ancient_Leshen_Icon.png`,
@@ -1185,7 +1189,7 @@ export const monstersInfo = [
   {
     name: `Behemoth`,
     type: `elder-dragons`,
-    description: ``,
+    description: `A powerful beast from another world. Its large horns and muscular frame defy nature. Unique strategies are required to battle it.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Behemoth_Icon.png`, `Behemoth icon`],
       [
@@ -1201,7 +1205,7 @@ export const monstersInfo = [
   {
     name: `Fatalis`,
     type: `elder-dragons`,
-    description: ``,
+    description: `A legendary black dragon known only as Fatalis. Rumored to have destroyed a kingdom in a single night, and has taken its castle for a roost.<br/> As Long as its horns are intact, overcoming its final form's breath attack may be impossible. Cannons and ballistae can topple it. Flinch shots when its flying or standing will lower its head.`,
     imageSrc: [
       [
         `https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-fatalis_icon.png`,
@@ -1220,7 +1224,7 @@ export const monstersInfo = [
   {
     name: `Anteka`,
     type: `small-monsters`,
-    description: ``,
+    description: `Herbivores of the tundra that are slightly more aggressive than Kelbi, using their horns to fend off any attackers.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Anteka_Icon.png`, `Anteka icon`],
       [
@@ -1236,7 +1240,7 @@ export const monstersInfo = [
   {
     name: `Apceros`,
     type: `small-monsters`,
-    description: ``,
+    description: `Herbivores that inhabit the Wildspire Waste. They've developed particularly hard hide to ward off attackers, and are known to gather in groups to defend themselves.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Apceros_Icon.png`, `Apceros icon`],
       [
@@ -1252,7 +1256,7 @@ export const monstersInfo = [
   {
     name: `Aptonoth`,
     type: `small-monsters`,
-    description: ``,
+    description: `Docile herbivores that graze in packs. Their meat is considered a delicacy and is rich in nutrients. If one member of the herd is attacked, the rest will flee immediately.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Aptonoth_Icon.png`, `Aptonoth icon`],
       [
@@ -1268,7 +1272,7 @@ export const monstersInfo = [
   {
     name: `Barnos`,
     type: `small-monsters`,
-    description: ``,
+    description: `Fervid wingdrakes that have flourished under harsh living conditions. They target intruders with a unique acidic agent, and then attack as a swarm.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Barnos_Icon.png`, `Barnos icon`],
       [
@@ -1284,7 +1288,8 @@ export const monstersInfo = [
   {
     name: `Boaboa`,
     type: `small-monsters`,
-    description: ``,
+    description: `The Boaboa have the basic shape of a Grimalkyne, but exhibit much thicker, white fur and a bulkier frame. They wear crude imitations of Popo heads as masks, with the tusk's tips painted in colours that correspond to the status ailment each individual Boaboa uses in combat.<br/>
+    The Boaboa are capable of using many different status ailments to damage their foes. They feed on Popo, but also show reverence to the creatures, dressing up to look like them and travelling with the herds through the Hoarfrost Reach. Young Boaboa can undergo a sort of rite of passage where they hunt a Beotodus. If they survive, they are seen as heroes in the tribe.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Barnos_Icon.png`, `Boaboa icon`],
       [
