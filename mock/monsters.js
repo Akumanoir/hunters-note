@@ -112,8 +112,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Rathian_Icon.png`, `Rathian icon`],
       [
-        `./assets/modals/MHW-Barroth.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Rathian.png`,
+        `An image of a Rathian`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -128,8 +128,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Tzitzi-Ya-Ku_Icon.png`, `Tzitzi-Ya-Ku icon`],
       [
-        `./assets/modals/MHW-Barroth.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Tzitzi-Ya-Ku.png`,
+        `An image of a Tzitzi-Ya-Ku`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -144,8 +144,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Paolumu_Icon.png`, `Paolomu icon`],
       [
-        `./assets/modals/MHW-Barroth.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Paolumu.png`,
+        `An image of a Paolomu`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1305,7 +1305,7 @@ export const monstersInfo = [
   {
     name: `Cortos`,
     type: `small-monsters`,
-    description: ``,
+    description: `A wingdrake from the Hinterlands. Usually not aggressive, but may attacks hunters in a bind. Its breath lowers elemental resistance.`,
     imageSrc: [
       [
         `https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/mhwi-cortos_icon.png`,
@@ -1324,7 +1324,8 @@ export const monstersInfo = [
   {
     name: `Gajalaka`,
     type: `small-monsters`,
-    description: ``,
+    description: `This Lynian discovered in the New World is small, but unlike Felynes and Grimalkynes, Galajakas have a humanlike physique. Their language is unique and analysis of their traces is needed to establish communication. Their culture enjoys dancing but is still warlike. Except for a few friendly people, anyone who approaches them is considered a target for elimination. Lynians who wear similar masks exist in the Old World too, and they are generally referred to as Galajakas.<br/>
+    The Galajakas scattered around each location are often hostile. This is because, much like the Grimalkynes, several tribes exist among them, and the hunter will not have interacted with all of them. Their attacks induce small abnormal status effects, and though they are very small, the Galajakas are very dangerous. Common knowledge says the that driving them away with Flash Pods and Scatternutes is best.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Gajalaka_Icon.png`, `Gajalaka icon`],
       [
@@ -1340,7 +1341,7 @@ export const monstersInfo = [
   {
     name: `Gajau`,
     type: `small-monsters`,
-    description: ``,
+    description: `Vicious piscine that forms groups to defend their territory from intruders. Be sure not to venture too close to their habitat!`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Gajau_Icon.png`, `Gajau icon`],
       [
@@ -1356,7 +1357,7 @@ export const monstersInfo = [
   {
     name: `Gastodon`,
     type: `small-monsters`,
-    description: ``,
+    description: `Pack monsters that inhabit the Elder's Recess. They are easily angered by intruders, and will charge at monsters twice their size.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Gastodon_Icon.png`, `Gastodon icon`],
       [
@@ -1372,7 +1373,7 @@ export const monstersInfo = [
   {
     name: `Girros`,
     type: `small-monsters`,
-    description: ``,
+    description: `Monsters that are known to attack in packs, using the deadly vapor of the Rotten Vale to their advantage. They are known for crippling targets with their paralyzing fangs.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Girros_Icon.png`, `Girros icon`],
       [
@@ -1388,7 +1389,7 @@ export const monstersInfo = [
   {
     name: `Grimalkyne`,
     type: `small-monsters`,
-    description: ``,
+    description: `Grimalkyne are Lynians first introduced in Monster Hunter: World. Grimalkyne are organized across different tribes found in various areas. The Bugtrappers are found in the Ancient Forest, the Protectors are found in the Wildspire Waste, the Troupers are found in the Coral Highlands, and the Plunderers are found in the Rotten Vale.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Grimalkyne_Icon.png`, `Grimalkyne icon`],
       [
@@ -1404,7 +1405,7 @@ export const monstersInfo = [
   {
     name: `Hornetaur`,
     type: `small-monsters`,
-    description: ``,
+    description: `Small insects that are found primarily on land. They're highly territorial and will attack anything that approaches them. Gather their materials by attacking them with a slinger.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Hornetaur_Icon.png`, `Hornetaur icon`],
       [
@@ -1420,7 +1421,7 @@ export const monstersInfo = [
   {
     name: `Jargras`,
     type: `small-monsters`,
-    description: ``,
+    description: `Members of the Great Jagras pack, these smaller monsters will flee upon seeing one of their own perish. They are also known for ambushing larger monsters at a moment's notice.`,
     imageSrc: [
       [
         `https://www.nicepng.com/png/full/135-1356453_mhw-jagras-icon-monster-hunter-world-jagras-icon.png`,
@@ -1439,7 +1440,7 @@ export const monstersInfo = [
   {
     name: `Kelbi`,
     type: `small-monsters`,
-    description: ``,
+    description: `Small herbivores known for their gentle demeanor and the medicinal properties of their horns. Those wishing to harvest a horn should aim for the head when attacking them.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Kelbi_Icon.png`, `Kelbi icon`],
       [
@@ -1455,7 +1456,7 @@ export const monstersInfo = [
   {
     name: `Kestodon`,
     type: `small-monsters`,
-    description: ``,
+    description: ` Female Kestodon will alert the pack of danger, while the males will violently charge would-be threats. Their rushing charges can be blocked, however, leaving them open to attacks.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Kestodon_Icon.png`, `Kestodon icon`],
       [
@@ -1471,7 +1472,7 @@ export const monstersInfo = [
   {
     name: `Mernos`,
     type: `small-monsters`,
-    description: ``,
+    description: `Wingdrakes that feast on scatternuts. The flock will travel great distances when startled, making them an invaluable mode of transportation for clever hunters.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Mernos_Icon.png`, `Mernos icon`],
       [
@@ -1487,7 +1488,7 @@ export const monstersInfo = [
   {
     name: `Mosswine`,
     type: `small-monsters`,
-    description: ``,
+    description: `Mosswine are known for their excellent sense of smell, and are often found foraging for fungi. If you're hunting around for mushrooms, follow the Mosswine to the motherlode.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Mosswine_Icon.png`, `Mosswine icon`],
       [
@@ -1503,7 +1504,7 @@ export const monstersInfo = [
   {
     name: `Noios`,
     type: `small-monsters`,
-    description: ``,
+    description: ` Wingdrakes that will produce a sound similar to screamer pods when startled. Use meat to get their attention, and then hunt them for materials, or use them as transportation.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Noios_Icon.png`, `Noios icon`],
       [
@@ -1519,7 +1520,7 @@ export const monstersInfo = [
   {
     name: `Popo`,
     type: `small-monsters`,
-    description: ``,
+    description: `Long-furred herbivores native to the tundra. Gentle in nature, they flee when attacked, though grown males will defend their young.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Popo_Icon.png`, `Popo icon`],
       [
@@ -1535,7 +1536,7 @@ export const monstersInfo = [
   {
     name: `Raphinos`,
     type: `small-monsters`,
-    description: ``,
+    description: `Wingdrakes inhabiting the Coral Highlands. They group up to steal the eggs of other animals, but this in turn exposes them to the attention of larger, more vicious predators.`,
     imageSrc: [
       [`./assets/monsters-icon/mhw-raphinos_icon.png`, `Raphinos icon`],
       [
@@ -1551,7 +1552,7 @@ export const monstersInfo = [
   {
     name: `Shamos`,
     type: `small-monsters`,
-    description: ``,
+    description: `Small nocturnal monsters. They&#8217re particularly vulnerable to Tzitzi-Ya-Ku&#8217s blinding flash, but have been know to gang up on enemies.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Shamos_Icon.png`, `Shamos icon`],
       [
@@ -1567,7 +1568,7 @@ export const monstersInfo = [
   {
     name: `Vespoid`,
     type: `small-monsters`,
-    description: ``,
+    description: `Insects that paralyze their targets with their long stingers. They break easily, so attack them with poison or slinger ammo if you want to carve them.`,
     imageSrc: [
       [`./assets/monsters-icon/MHW_Vespoid_Icon.png`, `Vespoid icon`],
       [
@@ -1583,7 +1584,7 @@ export const monstersInfo = [
   {
     name: `Wulg`,
     type: `small-monsters`,
-    description: ``,
+    description: `Miniature fanged wyverns of the Hinterlands. They doggedly stalk prey as a pack, and will attack even foes much larger than they.`,
     imageSrc: [
       [`./assets/monsters-icon/MHWI_wulg_icon.png`, `Wulg icon`],
       [
