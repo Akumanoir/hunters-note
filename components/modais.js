@@ -10,8 +10,8 @@ export function loadModal(monstersInfo) {
       <div class="modal_wrapper">
         <div class="left_container">
           <img src="${monstersInfo.imageSrc[1][0]}" alt="${
-    monstersInfo.imageSrc[1][1]
-  }">
+            monstersInfo.imageSrc[1][1]
+          }">
         </div>
         <div class="right_container">
           <div class="top">
@@ -21,7 +21,7 @@ export function loadModal(monstersInfo) {
           <div class="middle grid">
             <div class="table_wrapper grid">
               <h3>World information</h3>
-              <p style = "text-align: justify;">${
+              <p>${
                 monstersInfo.description || "Unavailable"
               }</p>
             </div>
