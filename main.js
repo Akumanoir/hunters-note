@@ -1,5 +1,5 @@
 import { monstersInfo } from "./mock/monsters.js"
-import { loadModal } from "./src/modais.js"
+import { loadModal } from "./components/modais.js"
 
 const buttonContainer = document.querySelector("#button-container")
 const searchElement = document.querySelector("#monster-name")
