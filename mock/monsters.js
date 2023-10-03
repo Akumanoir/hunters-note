@@ -708,8 +708,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Namielle_Icon.png`, `Namielle icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Namielle.webp`,
+        `An image of a Namielle`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -727,8 +727,8 @@ export const monstersInfo = [
         `Fulgur Anjanath icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Fulgur_Anjanath.webp`,
+        `An image of a Fulgur Anjanath`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -746,8 +746,8 @@ export const monstersInfo = [
         `Acidic Glavenus icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Acidic_Glavenus.webp`,
+        `An image of a Acidic Glavenus`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -765,8 +765,8 @@ export const monstersInfo = [
         `Ebony Odogaron icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Ebony_Odogaron.webp`,
+        `An image of a Ebony Odogaron`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -784,8 +784,8 @@ export const monstersInfo = [
         `Nightshade Paolomu icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Nightshade_Paolomu.webp`,
+        `An image of a Nightshade Paolomu`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -803,8 +803,8 @@ export const monstersInfo = [
         `Shrieking Legiana icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Shrieking_Legiana.webp`,
+        `An image of a Shrieking Legiana`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -822,8 +822,8 @@ export const monstersInfo = [
         `Coral Pukei-Pukei icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Coral_Pukei_Pukei.webp`,
+        `An image of a Coral Pukei-Pukei`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -841,8 +841,8 @@ export const monstersInfo = [
         `Frostfang Barioth icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Frostfang_Barioth.png`,
+        `An image of a Frostfang Barioth`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -860,8 +860,8 @@ export const monstersInfo = [
         `Seething Bazelgeuse icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Seething_Bazelgeuse.png`,
+        `An image of a Seething Bazelgeuse`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1597,4 +1597,4 @@ export const monstersInfo = [
       `image of the Monster Hunter World: Iceborne logo`,
     ],
   },
-]
+];
