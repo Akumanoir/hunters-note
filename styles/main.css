@@ -37,7 +37,8 @@ body::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 1rem;
   border: .4rem solid white;
-}
+} 
+
 
 html,
 body {
@@ -422,6 +423,7 @@ footer > section img {
     display: grid !important;
     gap: 1rem !important;
     padding-top: 5rem !important;
+    border: none !important;
   }
 
   .image-container {
@@ -494,11 +496,6 @@ footer > section img {
   display: grid;
   place-content: center;
 }
-
-/* .show-modal {
-  opacity: 1;
-  pointer-events: all;
-} */
 
 .modal_wrapper {
   background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(131, 128, 130) 100%);
