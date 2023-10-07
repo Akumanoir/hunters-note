@@ -879,8 +879,8 @@ export const monstersInfo = [
         `Savage Deviljho icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Savage_Deviljho.webp`,
+        `An image of a Savage Deviljho`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -898,8 +898,8 @@ export const monstersInfo = [
         `Raging Brachydios icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Raging_Brachydios.webp`,
+        `An image of a Raging Brachydios`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -917,8 +917,8 @@ export const monstersInfo = [
         `Ruiner Nergigante icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Ruiner_Nergigante.webp`,
+        `An image of a Ruiner Nergigante`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -936,8 +936,8 @@ export const monstersInfo = [
         `Furious Rajang icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Furious_Rajang.png`,
+        `An image of a Furious Rajang`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -955,8 +955,8 @@ export const monstersInfo = [
         `Gold Rathian icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Gold_Rathian.png`,
+        `An image of a Gold Rathian`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -974,8 +974,8 @@ export const monstersInfo = [
         `Safi&#8217jiiva icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Safi_jiiva.webp`,
+        `An image of a Safi&#8217jiiva`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -993,8 +993,8 @@ export const monstersInfo = [
         `Shara Ishvalda icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Shara_Ishvalda.webp`,
+        `An image of a Shara Ishvalda`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1012,8 +1012,8 @@ export const monstersInfo = [
         `Brute Tigrex icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Brute_Tigrex.webp`,
+        `An image of a Brute Tigrex`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1031,8 +1031,8 @@ export const monstersInfo = [
         `Silver Rathalos icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Silver_Rathalos.png`,
+        `An image of a Silver Rathalos`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1050,8 +1050,8 @@ export const monstersInfo = [
         `Viper Tobi-Kadachi icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Viper_Tobi-Kadachi.webp`,
+        `An image of a Viper Tobi-Kadachi`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1069,8 +1069,8 @@ export const monstersInfo = [
         `Blackveil Vaal Hazak icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Blackveil_Vaal_Hazak.webp`,
+        `An image of a Blackveil Vaal Hazak`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1088,8 +1088,8 @@ export const monstersInfo = [
         `Scarred Yian Garuga icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Scarred_Yian_Garuga.webp`,
+        `An image of a Scarred Yian Garuga`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1107,8 +1107,8 @@ export const monstersInfo = [
         `Stygian Zinogre icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Stygian_Zinogre.webp`,
+        `An image of a Stygian Zinogre`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1126,8 +1126,8 @@ export const monstersInfo = [
         `Alatreon icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Alatreon.webp`,
+        `An image of a Alatreon`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1142,8 +1142,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Kulve_Taroth_Icon.png`, `Kulve Taroth icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Kulve_Taroth.webp`,
+        `An image of a Kulve Taroth`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1158,8 +1158,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Leshen_Icon.png`, `Leshen icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Leshen.webp`,
+        `An image of a Leshen`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1177,8 +1177,8 @@ export const monstersInfo = [
         `Ancient Leshen icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Ancient_Leshen.webp`,
+        `An image of a Ancient Leshen`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1193,8 +1193,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Behemoth_Icon.png`, `Behemoth icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Behemoth.webp`,
+        `An image of a Behemoth`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1212,8 +1212,8 @@ export const monstersInfo = [
         `Fatalis icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Fatalis.png`,
+        `An image of a Fatalis`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1228,8 +1228,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Anteka_Icon.png`, `Anteka icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Anteka.png`,
+        `An image of a Anteka`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1244,8 +1244,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Apceros_Icon.png`, `Apceros icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Apceros.webp`,
+        `An image of a Apceros`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1260,8 +1260,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Aptonoth_Icon.png`, `Aptonoth icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Aptonoth.webp`,
+        `An image of a Aptonoth`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1276,8 +1276,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Barnos_Icon.png`, `Barnos icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Barnos.webp`,
+        `An image of a Barnos`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1291,10 +1291,10 @@ export const monstersInfo = [
     description: `The Boaboa have the basic shape of a Grimalkyne, but exhibit much thicker, white fur and a bulkier frame. They wear crude imitations of Popo heads as masks, with the tusk's tips painted in colours that correspond to the status ailment each individual Boaboa uses in combat.<br/>
     The Boaboa are capable of using many different status ailments to damage their foes. They feed on Popo, but also show reverence to the creatures, dressing up to look like them and travelling with the herds through the Hoarfrost Reach. Young Boaboa can undergo a sort of rite of passage where they hunt a Beotodus. If they survive, they are seen as heroes in the tribe.`,
     imageSrc: [
-      [`./assets/monsters-icon/MHW_Barnos_Icon.png`, `Boaboa icon`],
+      [`./assets/monsters-icon/MHWI_Boaboa_Icon.png`, `Boaboa icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Boaboa.webp`,
+        `An image of a Boaboa`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1312,8 +1312,8 @@ export const monstersInfo = [
         `Cortos icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Cortos.webp`,
+        `An image of a Cortos`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1329,8 +1329,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Gajalaka_Icon.png`, `Gajalaka icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Gajalaka.webp`,
+        `An image of a Gajalaka`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1345,8 +1345,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Gajau_Icon.png`, `Gajau icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Gajau.png`,
+        `An image of a Gajau`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1361,8 +1361,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Gastodon_Icon.png`, `Gastodon icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Gastodon.webp`,
+        `An image of a Gastodon`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1377,8 +1377,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Girros_Icon.png`, `Girros icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Girros.webp`,
+        `An image of a Girros`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1393,8 +1393,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Grimalkyne_Icon.png`, `Grimalkyne icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Grimalkyne.webp`,
+        `An image of a Grimalkyne`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1409,8 +1409,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Hornetaur_Icon.png`, `Hornetaur icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Hornetaur.webp`,
+        `An image of a Hornetaur`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1428,8 +1428,8 @@ export const monstersInfo = [
         `Jargras icon`,
       ],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Jargras.png`,
+        `An image of a Jargras`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1444,8 +1444,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Kelbi_Icon.png`, `Kelbi icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Kelbi.png`,
+        `An image of a Kelbi`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1460,8 +1460,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Kestodon_Icon.png`, `Kestodon icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Kestodon.png`,
+        `An image of a Kestodon`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1476,8 +1476,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Mernos_Icon.png`, `Mernos icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Mernos.webp`,
+        `An image of a Mernos`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1492,8 +1492,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Mosswine_Icon.png`, `Mosswine icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Mosswine.webp`,
+        `An image of a Mosswine`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1508,8 +1508,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Noios_Icon.png`, `Noios icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Noios.webp`,
+        `An image of a Noios`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1524,8 +1524,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHWI_Popo_Icon.png`, `Popo icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Popo.png`,
+        `An image of a Popo`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1540,8 +1540,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/mhw-raphinos_icon.png`, `Raphinos icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Raphinos.webp`,
+        `An image of a Raphinos`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1556,8 +1556,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Shamos_Icon.png`, `Shamos icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Shamos.webp`,
+        `An image of a Shamos`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1572,8 +1572,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHW_Vespoid_Icon.png`, `Vespoid icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHW-Vespoid.png`,
+        `An image of a Vespoid`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
@@ -1588,8 +1588,8 @@ export const monstersInfo = [
     imageSrc: [
       [`./assets/monsters-icon/MHWI_wulg_icon.png`, `Wulg icon`],
       [
-        `./assets/modals/MHWI-.png`,
-        `An image of a Barroth`,
+        `./assets/modals/MHWI-Wulg.webp`,
+        `An image of a Wulg`,
       ] /*Atualizar essa array para a imagem certa*/,
     ],
     mhwIcon: [
