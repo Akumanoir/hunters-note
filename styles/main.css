@@ -81,7 +81,7 @@ body {
   width: .1rem;
   height: .1rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.1rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -432,6 +432,7 @@ footer > section img {
   }
 
   .left_container img{
+    max-width: 40rem !important;
     width: 100% !important;
     object-fit: contain !important;
   }
@@ -501,7 +502,7 @@ footer > section img {
   background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(131, 128, 130) 100%);
   border-radius: 2rem;
 
-  max-width: 1000px;
+  max-width: 100rem;
   height: 60rem;
   display: flex;
 }
