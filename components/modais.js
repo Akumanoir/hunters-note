@@ -3,27 +3,30 @@
 // import { monstersInfo } from "../mock/monsters.js"
 
 export function loadModal(monstersInfo) {
-  const loadModalContainer = document.querySelector("#load_modal")
+  const loadModalContainer = document.querySelector("#load_modal");
 
   loadModalContainer.innerHTML = `
     <div class="modal_background grid modal">
       <div class="modal_wrapper">
+        <div class="close_button_phone">
+            <div class="close-button"><i class="ph ph-x"></i></div>
+          </div>
         <div class="left_container">
-          <img src="${monstersInfo.imageSrc[1][0]}" alt="${
-            monstersInfo.imageSrc[1][1]
-          }">
+          <div class="image-container">
+            <img src="${monstersInfo.imageSrc[1][0]}" alt="${
+              monstersInfo.imageSrc[1][1]
+            }">
+          </div>
         </div>
         <div class="right_container">
           <div class="top">
             <h2>${monstersInfo.name}</h2>
-            <div class="close-button"><i class="ph ph-x"></i></div>
+            <div class="close-button computer"><i class="ph ph-x"></i></div>
           </div>
           <div class="middle grid">
             <div class="table_wrapper grid">
               <h3>World information</h3>
-              <p>${
-                monstersInfo.description || "Unavailable"
-              }</p>
+              <p>${monstersInfo.description || "Unavailable"}</p>
             </div>
             <div class="table_wrapper grid">
               <h3>Weakness</h3>
@@ -463,12 +466,28 @@ export function loadModal(monstersInfo) {
           </div>
         </div>
       </div>
-    </div>`
+    </div>`;
 
   // Desativar o modal ---------------------------------------------------------
-  const modalContainer = document.querySelector("div.modal")
-  const closeButton = document.querySelector("div.close-button")
-  closeButton.addEventListener("click", () => {
-    loadModalContainer.removeChild(modalContainer)
-  })
+  const modalContainer = document.querySelector("div.modal");
+  const closeButton = [...document.querySelectorAll("div.close-button")];
+  closeButton.forEach((button) => {
+    button.addEventListener("click", () => {
+      loadModalContainer.removeChild(modalContainer);
+    });
+  });
+  const closeButtonContainer = document.querySelector("div.close_button_phone");
+  const modalScroll = document.querySelector("div.modal_wrapper");
+
+  modalScroll.onscroll = scrollBackground;
+  
+  function scrollBackground(e) {
+    closeButtonContainer.style.background =
+      "linear-gradient(0deg, rgba(238,174,202,0) 0%, rgba(151, 151, 151) 53%)";
+    if (e.target.scrollTop === 0) {
+      closeButtonContainer.style.background = "transparent";
+    }
+    console.log(e.target.scrollTop)
+  }
 }
+
